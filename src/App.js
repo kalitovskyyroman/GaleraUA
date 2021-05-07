@@ -12,39 +12,36 @@ import Aside from './components/Aside/Aside';
 
 import s from './App.module.css';
 
-function App() {
-    return (
-        <div className={s.grid_wrapper}>
-            <BrowserRouter>
-                <Header />
-                <Aside />
-                <Switch>
-                    <Route exact path='/'>
-                        <Home />
-                    </Route>
-                    <Route exact path='/login'>
-                        <Login />
-                    </Route>
-                    <Route exact path='/signup'>
-                        <Signup />
-                    </Route>
-                    <Route exact path='/jobList'>
-                        <JobList />
-                    </Route>
-                    <Route exact path='/pinnedJobs'>
-                        <PinnedJobs />
-                    </Route>
-                    <Route exact path='/selectedJobs'>
-                        <SelectedJobs />
-                    </Route>
-                    <Route path='*'>
-                        <NotFound />
-                    </Route>
-                </Switch>
-                <Footer />
-            </BrowserRouter>
-        </div>
-    );
-}
-
+const App = () => (
+    <div className={s.grid_wrapper}>
+        <BrowserRouter>
+            <Header />
+            <Aside />
+            <Switch>
+                <Route exact path='/'>
+                    <Home />
+                </Route>
+                <Route exact path='/login'>
+                    <Login />
+                </Route>
+                <Route exact path='/signup'>
+                    <Signup />
+                </Route>
+                <Route exact path='/jobList'>
+                    <JobList />
+                </Route>
+                <Route exact path='/pinnedJobs'>
+                    <PinnedJobs />
+                </Route>
+                <Route exact path='/selectedJobs'>
+                    <SelectedJobs />
+                </Route>
+                <Route path='*'>
+                    <NotFound />
+                </Route>
+            </Switch>
+            <Footer />
+        </BrowserRouter>
+    </div>
+);
 export default App;

@@ -1,0 +1,22 @@
+[
+    {
+        "text": "Home",
+        "path": "/"
+    },
+    {
+        "text": "item2",
+        "path": "/login"
+    },
+    {
+        "text": "item3",
+        "path": "/signup"
+    },
+    {
+        "text": "item4",
+        "path": "/pinnedJobs"
+    },
+    {
+        "text": "item4",
+        "path": "/selectedJobs"
+    }
+]
