@@ -1,0 +1,29 @@
+.grid_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 4fr 7fr 3fr;
+    grid-template-areas:
+        'header header'
+        'aside content'
+        'footer footer';
+}
+
+.grid_header {
+    grid-area: header;
+    background-color: rgb(30, 255, 0);
+}
+
+.grid_aside {
+    grid-area: aside;
+    background-color: rgb(255, 196, 0);
+}
+
+.grid_content {
+    grid-area: content;
+    background-color: aqua;
+}
+
+.grid_footer {
+    grid-area: footer;
+    background-color: rgb(98, 0, 255);
+}

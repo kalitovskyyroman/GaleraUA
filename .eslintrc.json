@@ -14,9 +14,15 @@
     "plugins": ["react", "prettier"],
     "parser": "babel-eslint",
     "rules": {
-        "prettier/prettier": ["error", { "arrowParens": "avoid", "tabWidth": 4, "printWidth": 120 }],
+        "prettier/prettier": [
+            "error",
+            { "arrowParens": "avoid", "tabWidth": 4, "printWidth": 120, "endOfLine": "auto" }
+        ],
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "no-console": "warn",
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "off",
+        "no-absolute-path": 0,
+        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+        "no-debugger": "warn"
     }
 }
