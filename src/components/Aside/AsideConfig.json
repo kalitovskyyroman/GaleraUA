@@ -4,19 +4,23 @@
         "path": "/"
     },
     {
-        "text": "item2",
+        "text": "Login",
         "path": "/login"
     },
     {
-        "text": "item3",
+        "text": "Signup",
         "path": "/signup"
     },
     {
-        "text": "item4",
+        "text": "Pinned Jobs",
         "path": "/pinnedJobs"
     },
     {
-        "text": "item4",
+        "text": "Selected jobs",
         "path": "/selectedJobs"
+    },
+    {
+        "text": "Job list",
+        "path": "/jobList"
     }
 ]

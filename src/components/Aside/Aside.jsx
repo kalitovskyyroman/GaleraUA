@@ -7,7 +7,7 @@ import grid from '../../App.module.css';
 const Aside = () => (
     <aside className={grid.grid_aside}>
         {routes.map(route => (
-            <NavLink exact to={route.path}>
+            <NavLink key={route.path} exact to={route.path}>
                 {route.text}
             </NavLink>
         ))}
