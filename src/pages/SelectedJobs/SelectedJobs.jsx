@@ -1,4 +1,6 @@
 import React from 'react';
 
-const SelectedJobs = () => <div>SelectedJobs</div>;
+import grid from '../../App.module.css';
+
+const SelectedJobs = () => <div className={grid.grid_content}>SelectedJobs</div>;
 export default SelectedJobs;

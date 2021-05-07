@@ -1,4 +1,6 @@
 import React from 'react';
 
-const Login = () => <div>Login</div>;
+import grid from '../../App.module.css';
+
+const Login = () => <div className={grid.grid_content}>Login</div>;
 export default Login;

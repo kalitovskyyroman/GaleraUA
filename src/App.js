@@ -6,11 +6,18 @@ import Signup from './pages/Signup/Signup';
 import JobList from './pages/JobList/JobList';
 import PinnedJobs from './pages/PinnedJobs/PinnedJobs';
 import SelectedJobs from './pages/SelectedJobs/SelectedJobs';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Aside from './components/Aside/Aside';
+
+import s from './App.module.css';
 
 function App() {
     return (
-        <div>
+        <div className={s.grid_wrapper}>
             <BrowserRouter>
+                <Header />
+                <Aside />
                 <Switch>
                     <Route exact path='/'>
                         <Home />
@@ -34,6 +41,7 @@ function App() {
                         <NotFound />
                     </Route>
                 </Switch>
+                <Footer />
             </BrowserRouter>
         </div>
     );

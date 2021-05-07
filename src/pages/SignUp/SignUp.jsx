@@ -1,4 +1,6 @@
 import React from 'react';
 
-const Signup = () => <div>Signup</div>;
+import grid from '../../App.module.css';
+
+const Signup = () => <div className={grid.grid_content}>Signup</div>;
 export default Signup;

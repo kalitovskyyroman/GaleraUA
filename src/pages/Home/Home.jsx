@@ -1,4 +1,7 @@
 import React from 'react';
 
-const Home = () => <div>Home</div>;
+import grid from '../../App.module.css';
+
+const Home = () => <div className={grid.grid_content}>Home</div>;
+
 export default Home;

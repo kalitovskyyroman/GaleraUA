@@ -1,4 +1,6 @@
 import React from 'react';
 
-const PinnedJobs = () => <div>PinnedJobs</div>;
+import grid from '../../App.module.css';
+
+const PinnedJobs = () => <div className={grid.grid_content}>PinnedJobs</div>;
 export default PinnedJobs;
