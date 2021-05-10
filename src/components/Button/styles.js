@@ -20,6 +20,7 @@ const StyledButton = styled.button`
     color: white;
     &: hover {
         cursor: pointer;
+        opacity: 0.7;
     }
 `;
 
