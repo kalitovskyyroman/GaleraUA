@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import StyledButton from './styles';
 
-const Button = ({ children, ...props }) => <StyledButton {...props}>{children}</StyledButton>;
+const Button = props => <StyledButton {...props} />;
 
 Button.defaultProps = { children: '' };
 

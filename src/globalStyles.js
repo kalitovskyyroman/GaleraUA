@@ -6,6 +6,14 @@ const Global = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 }
+
+button {
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    padding: 5px;
+}
 `;
 
 export const btnTheme = {

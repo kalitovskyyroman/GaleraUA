@@ -1,12 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TitleWrapper, StyledTitle } from './styles';
+import StyledTitle from './styles';
 
-const Title = ({ children }) => (
-    <TitleWrapper>
-        <StyledTitle>{children}</StyledTitle>
-    </TitleWrapper>
-);
+const Title = ({ children }) => <StyledTitle>{children}</StyledTitle>;
 
 Title.defaultProps = { children: '' };
 

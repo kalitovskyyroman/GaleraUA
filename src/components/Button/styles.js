@@ -1,6 +1,43 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { btnTheme, btnSize } from '../../globalStyles';
+
+const btnTheme = {
+    regular: '#ade8f4',
+    primary: '#48cae4',
+    danger: '#ef476f',
+    warn: '#ffba08',
+};
+
+const btnSize = {
+    small: {
+        fontSize: '10px',
+        paddingLeft: '10px',
+        paddingRight: '10px',
+        borderRadius: '5px',
+        padding: '3px',
+    },
+    regular: {
+        fontSize: '20px',
+        paddingLeft: '20px',
+        paddingRight: '20px',
+        borderRadius: '5px',
+        padding: '5px',
+    },
+    medium: {
+        fontSize: '25px',
+        paddingLeft: '22px',
+        paddingRight: '22px',
+        borderRadius: '5px',
+        padding: '5px',
+    },
+    large: {
+        fontSize: '30px',
+        paddingLeft: '25px',
+        paddingRight: '25px',
+        borderRadius: '7px',
+        padding: '5px',
+    },
+};
 
 const StyledButton = styled.button`
     font-size: ${props => btnSize[props.size].fontSize || btnSize.regular.fontSize};

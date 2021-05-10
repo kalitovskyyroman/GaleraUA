@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const StyledHeader = styled.header`
-    min-height: 80px;
-    max-height: 80px;
+    min-height: 10vh;
+    max-height: 10vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
