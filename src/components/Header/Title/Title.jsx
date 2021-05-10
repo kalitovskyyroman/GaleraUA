@@ -8,6 +8,8 @@ const Title = ({ children }) => (
     </TitleWrapper>
 );
 
-Title.propTypes = { children: PropTypes.element.isRequired };
+Title.defaultProps = { children: '' };
+
+Title.propTypes = { children: PropTypes.oneOfType([PropTypes.object, PropTypes.string]) };
 
 export default Title;
