@@ -6,39 +6,49 @@ import JobList from './pages/JobList/JobList';
 import PinnedJobs from './pages/PinnedJobs/PinnedJobs';
 import SelectedJobs from './pages/SelectedJobs/SelectedJobs';
 
+export const paths = {
+    home: '/',
+    login: '/login',
+    signup: '/signup',
+    jobList: '/jobList',
+    pinnedJobs: '/pinnedJobs',
+    selectedJobs: '/selectedJobs',
+    notFound: '*',
+};
+
 const routers = [
     {
-        path: '/',
+        path: paths.home,
         component: Home,
         exact: true,
     },
     {
-        path: '/login',
+        path: paths.login,
         component: Login,
         exact: true,
     },
     {
-        path: '/signup',
+        path: paths.signup,
         component: Signup,
         exact: true,
     },
     {
-        path: '/jobList',
+        path: paths.jobList,
         component: JobList,
         exact: true,
     },
     {
-        path: '/pinnedJobs',
+        path: paths.pinnedJobs,
         component: PinnedJobs,
         exact: true,
     },
     {
-        path: '/selectedJobs',
+        path: paths.selectedJobs,
         component: SelectedJobs,
         exact: true,
     },
     {
-        path: '*',
+        path: paths.notFound,
         component: NotFound,
         exact: false,
     },

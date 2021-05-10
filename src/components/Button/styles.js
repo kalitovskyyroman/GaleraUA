@@ -38,7 +38,7 @@ const StyledButton = styled.button`
     padding: ${props => btnSize[props.size].padding || btnSize.regular.padding};
     padding-left: ${props => btnSize[props.size].paddingLeft || btnSize.regular.paddingLeft};
     padding-right: ${props => btnSize[props.size].paddingRight || btnSize.regular.paddingRight};
-    background-color: ${props => props.theme.btnColors[props.themeType] || props.theme.btnColors.regular};
+    background-color: ${props => props.theme.btnColors[props.mode] || props.theme.btnColors.regular};
     border: none;
     border-radius: ${props => btnSize[props.size].borderRadius || btnSize.regular.borderRadius};
     color: ${props => props.theme.btnColors.textColor};
@@ -49,10 +49,10 @@ const StyledButton = styled.button`
 `;
 
 StyledButton.propTypes = {
-    themeType: PropTypes.oneOf(['regular', 'primary', 'danger', 'warn']),
+    mode: PropTypes.oneOf(['regular', 'primary', 'danger', 'warn']),
     size: PropTypes.oneOf(['small', 'regular', 'medium', 'large']),
 };
 
-StyledButton.defaultProps = { themeType: 'regular', size: 'regular' };
+StyledButton.defaultProps = { mode: 'regular', size: 'regular' };
 
 export default StyledButton;

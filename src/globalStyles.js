@@ -18,8 +18,8 @@ button {
 
 export const theme = {
     btnColors: {
-        regular: '#ade8f4',
-        primary: '#48cae4',
+        regular: '#b7e4c7',
+        primary: '#52b788',
         danger: '#ef476f',
         warn: '#ffba08',
         textColor: 'white',

@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import React from 'react';
-import routes from './AsideConfig.json';
+import routes from './AsideConfig';
 
 import grid from '../../App.module.css';
 
