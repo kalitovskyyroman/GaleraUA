@@ -1,13 +1,6 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const btnTheme = {
-    regular: '#ade8f4',
-    primary: '#48cae4',
-    danger: '#ef476f',
-    warn: '#ffba08',
-};
-
 const btnSize = {
     small: {
         fontSize: '10px',
@@ -45,10 +38,10 @@ const StyledButton = styled.button`
     padding: ${props => btnSize[props.size].padding || btnSize.regular.padding};
     padding-left: ${props => btnSize[props.size].paddingLeft || btnSize.regular.paddingLeft};
     padding-right: ${props => btnSize[props.size].paddingRight || btnSize.regular.paddingRight};
-    background-color: ${props => btnTheme[props.themeType] || btnTheme.regular};
+    background-color: ${props => props.theme.btnColors[props.themeType] || props.theme.btnColors.regular};
     border: none;
     border-radius: ${props => btnSize[props.size].borderRadius || btnSize.regular.borderRadius};
-    color: white;
+    color: ${props => props.theme.btnColors.textColor};
     &: hover {
         cursor: pointer;
         opacity: 0.7;
