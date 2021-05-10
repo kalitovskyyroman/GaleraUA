@@ -1,22 +1,16 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-
-const theme = {
-    regular: '#ade8f4',
-    primary: '#48cae4',
-    danger: '#ef476f',
-    warn: '#ffba08',
-};
+import { btnTheme, btnSize } from '../../globalStyles';
 
 const StyledButton = styled.button`
-    font-size: 20px;
+    font-size: ${props => btnSize[props.size].fontSize || btnSize.regular.fontSize};
     font-weight: bold;
-    padding: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: ${props => theme[props.themeType] || theme.regular};
+    padding: ${props => btnSize[props.size].padding || btnSize.regular.padding};
+    padding-left: ${props => btnSize[props.size].paddingLeft || btnSize.regular.paddingLeft};
+    padding-right: ${props => btnSize[props.size].paddingRight || btnSize.regular.paddingRight};
+    background-color: ${props => btnTheme[props.themeType] || btnTheme.regular};
     border: none;
-    border-radius: 5px;
+    border-radius: ${props => btnSize[props.size].borderRadius || btnSize.regular.borderRadius};
     color: white;
     &: hover {
         cursor: pointer;
@@ -26,8 +20,9 @@ const StyledButton = styled.button`
 
 StyledButton.propTypes = {
     themeType: PropTypes.oneOf(['regular', 'primary', 'danger', 'warn']),
+    size: PropTypes.oneOf(['small', 'regular', 'medium', 'large']),
 };
 
-StyledButton.defaultProps = { themeType: 'regular' };
+StyledButton.defaultProps = { themeType: 'regular', size: 'regular' };
 
 export default StyledButton;
