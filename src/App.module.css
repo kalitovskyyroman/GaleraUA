@@ -1,4 +1,4 @@
-.grid_wrapper {
+/* .grid_wrapper {
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 10vh 7fr 3fr;
@@ -6,7 +6,7 @@
         'header header'
         'aside content'
         'footer footer';
-}
+} */
 
 .grid_header {
     grid-area: header;

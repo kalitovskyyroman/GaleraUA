@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import ArvoTTF from './assets/fonts/arvo/Arvo-Regular.ttf';
 
 const Global = createGlobalStyle`
@@ -81,5 +81,21 @@ export const theme = {
         textColor: 'white',
     },
 };
+
+export const GridLayout = styled.div`
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 7fr 2fr;
+    grid-template-areas:
+        'header header'
+        'aside content'
+        'footer footer';
+`;
+
+export const GridContent = styled.div`
+    grid-area: content;
+    background-color: aqua;
+`;
 
 export default Global;
