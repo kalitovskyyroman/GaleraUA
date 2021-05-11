@@ -23,6 +23,7 @@
         "react/react-in-jsx-scope": "off",
         "no-absolute-path": 0,
         "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
-        "no-debugger": "warn"
+        "no-debugger": "warn",
+        "react/jsx-props-no-spreading": "off"
     }
 }
