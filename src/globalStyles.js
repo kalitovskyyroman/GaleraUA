@@ -95,6 +95,7 @@ export const GridContent = styled.div`
 `;
 
 export const GridHeader = styled.header`
+    align-self: center;
     grid-column: 1 / -1;
 `;
 
