@@ -2,10 +2,8 @@ import { NavLink } from 'react-router-dom';
 import React from 'react';
 import routes from './AsideConfig';
 
-import grid from '../../App.module.css';
-
 const Aside = () => (
-    <aside className={grid.grid_aside}>
+    <aside>
         {routes.map(route => (
             <NavLink key={route.path} exact to={route.path}>
                 {route.text}

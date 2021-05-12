@@ -3,13 +3,13 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Aside from './components/Aside/Aside';
 import routers from './AppConfig';
-import { GridLayout, GridContent } from './globalStyles';
+import { GridLayout, GridContent, GridAside, GridFooter, GridHeader } from './globalStyles';
 
 const App = () => (
     <GridLayout>
         <BrowserRouter>
-            <Header />
-            <Aside />
+            <GridHeader children={<Header />} />
+            <GridAside children={<Aside />} />
             <GridContent>
                 <Switch>
                     {routers.map(route => (
@@ -17,7 +17,7 @@ const App = () => (
                     ))}
                 </Switch>
             </GridContent>
-            <Footer />
+            <GridFooter children={<Footer />} />
         </BrowserRouter>
     </GridLayout>
 );

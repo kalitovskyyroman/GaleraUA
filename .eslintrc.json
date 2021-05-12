@@ -24,6 +24,7 @@
         "no-absolute-path": 0,
         "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
         "no-debugger": "warn",
-        "react/jsx-props-no-spreading": "off"
+        "react/jsx-props-no-spreading": "off",
+        "react/no-children-prop": "off"
     }
 }
