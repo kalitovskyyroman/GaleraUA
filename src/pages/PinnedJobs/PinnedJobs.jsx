@@ -1,4 +1,4 @@
 import React from 'react';
 
-const PinnedJobs = () => <div>PinnedJobs</div>;
+const PinnedJobs = () => <>PinnedJobs</>;
 export default PinnedJobs;

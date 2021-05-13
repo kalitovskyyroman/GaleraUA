@@ -1,4 +1,4 @@
 import React from 'react';
 
-const SelectedJobs = () => <div>SelectedJobs</div>;
+const SelectedJobs = () => <>SelectedJobs</>;
 export default SelectedJobs;

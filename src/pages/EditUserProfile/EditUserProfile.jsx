@@ -1,4 +1,4 @@
 import React from 'react';
 
-const EditUserProfile = () => <div>EditUserProfile</div>;
+const EditUserProfile = () => <>EditUserProfile</>;
 export default EditUserProfile;
