@@ -1,6 +1,4 @@
 import React from 'react';
 
-import grid from '../../App.module.css';
-
-const EditUserProfile = () => <div className={grid.grid_content}>EditUserProfile</div>;
+const EditUserProfile = () => <>EditUserProfile</>;
 export default EditUserProfile;

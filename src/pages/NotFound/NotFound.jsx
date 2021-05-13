@@ -1,6 +1,4 @@
 import React from 'react';
 
-import grid from '../../App.module.css';
-
-const NotFound = () => <div className={grid.grid_content}>404</div>;
+const NotFound = () => <>404</>;
 export default NotFound;

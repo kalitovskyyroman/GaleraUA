@@ -3,21 +3,22 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Aside from './components/Aside/Aside';
 import routers from './AppConfig';
-
-import s from './App.module.css';
+import { GridLayout, GridContent, GridAside, GridFooter, GridHeader } from './globalStyles';
 
 const App = () => (
-    <div className={s.grid_wrapper}>
+    <GridLayout>
         <BrowserRouter>
-            <Header />
-            <Aside />
-            <Switch>
-                {routers.map(route => (
-                    <Route key={route.path} path={route.path} component={route.component} exact={route.exact} />
-                ))}
-            </Switch>
-            <Footer />
+            <GridHeader children={<Header />} />
+            <GridAside children={<Aside />} />
+            <GridContent>
+                <Switch>
+                    {routers.map(route => (
+                        <Route key={route.path} path={route.path} component={route.component} exact={route.exact} />
+                    ))}
+                </Switch>
+            </GridContent>
+            <GridFooter children={<Footer />} />
         </BrowserRouter>
-    </div>
+    </GridLayout>
 );
 export default App;
