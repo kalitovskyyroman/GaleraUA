@@ -1,10 +1,10 @@
-import Home from './pages/Home/Home';
-import NotFound from './pages/NotFound/NotFound';
-import Login from './pages/Login/Login';
-import Signup from './pages/SignUp/SignUp';
-import JobList from './pages/JobList/JobList';
-import PinnedJobs from './pages/PinnedJobs/PinnedJobs';
-import SelectedJobs from './pages/SelectedJobs/SelectedJobs';
+import Home from '../pages/Home/Home';
+import NotFound from '../pages/NotFound/NotFound';
+import Login from '../pages/Login/Login';
+import Signup from '../pages/SignUp/SignUp';
+import JobList from '../pages/JobList/JobList';
+import PinnedJobs from '../pages/PinnedJobs/PinnedJobs';
+import SelectedJobs from '../pages/SelectedJobs/SelectedJobs';
 
 export const paths = {
     home: '/',

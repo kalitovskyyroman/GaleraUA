@@ -2,10 +2,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Aside from './components/Aside/Aside';
-import routers from './AppConfig';
+import routers from './config/routers';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import { GridLayout, GridContent, GridAside, GridFooter, GridHeader } from './globalStyles';
-import User from './User';
+import User from './config/User';
 
 const App = () => (
     <GridLayout>
