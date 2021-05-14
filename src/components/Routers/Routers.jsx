@@ -5,7 +5,6 @@ import getAvailableRouters, { getPublicRouters } from '../../utils/AvailableRout
 
 const Routers = () => {
     const user = JSON.parse(localStorage.getItem('User'));
-    console.log(user);
 
     return (
         <Switch>
