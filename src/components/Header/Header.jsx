@@ -13,7 +13,7 @@ const Header = () => {
     return (
         <StyledHeader>
             <Title>{text.title}</Title>
-            <Button mode='primary' onClick={handleOnClick}>
+            <Button mode='primary' size='large' onClick={handleOnClick}>
                 {text.enter}
             </Button>
         </StyledHeader>

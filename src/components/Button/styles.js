@@ -4,23 +4,19 @@ import PropTypes from 'prop-types';
 const btnSize = {
     small: {
         fontSize: '10px',
-        borderRadius: '5px',
         padding: '3px 10px',
     },
     regular: {
         fontSize: '20px',
-        borderRadius: '5px',
         padding: '5px 20px',
     },
     medium: {
         fontSize: '25px',
-        borderRadius: '5px',
         padding: '5px 22px',
     },
     large: {
-        fontSize: '30px',
-        borderRadius: '7px',
-        padding: '5px 25px',
+        fontSize: '15px',
+        padding: '15px 40px',
     },
 };
 
@@ -30,11 +26,14 @@ const StyledButton = styled.button`
     padding: ${({ size }) => btnSize[size].padding || btnSize.regular.padding};
     background-color: ${({ mode, theme }) => theme.btnColors[mode] || theme.btnColors.regular};
     border: none;
-    border-radius: ${({ size }) => btnSize[size].borderRadius || btnSize.regular.borderRadius};
+    border-radius: 0;
+    border: 2px solid ${({ mode, theme }) => theme.btnColorsHover[mode] || theme.btnColorsHover.regular};
     color: ${({ theme }) => theme.btnColors.textColor};
+    text-transform: uppercase;
+    font-family: 'Arvo', sans-serif;
     &: hover {
         cursor: pointer;
-        opacity: 0.7;
+        background-color: ${({ mode, theme }) => theme.btnColorsHover[mode] || theme.btnColorsHover.regular};
     }
 `;
 

@@ -75,10 +75,13 @@ button {
 export const theme = {
     btnColors: {
         regular: '#b7e4c7',
-        primary: '#52b788',
+        primary: '#23311c',
         danger: '#ef476f',
         warn: '#ffba08',
         textColor: 'white',
+    },
+    btnColorsHover: {
+        primary: '#57B12D',
     },
 };
 
@@ -86,7 +89,7 @@ export const GridLayout = styled.div`
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(20, 1fr);
-    grid-template-rows: 10vh auto 20vh;
+    grid-template-rows: 13vh auto 20vh;
 `;
 
 export const GridContent = styled.div`
@@ -95,6 +98,7 @@ export const GridContent = styled.div`
 `;
 
 export const GridHeader = styled.header`
+    height: 100%;
     align-self: center;
     grid-column: 1 / -1;
 `;
