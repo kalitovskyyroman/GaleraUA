@@ -85,12 +85,12 @@ export const theme = {
 export const GridLayout = styled.div`
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(20, 1fr);
     grid-template-rows: 10vh auto 20vh;
 `;
 
 export const GridContent = styled.div`
-    grid-column: 3 / -1;
+    grid-column: 5 / -2;
     background-color: aqua;
 `;
 
@@ -100,8 +100,7 @@ export const GridHeader = styled.header`
 `;
 
 export const GridAside = styled.aside`
-    grid-column: 1 / 3;
-    background-color: rgb(255, 196, 0);
+    grid-column: 2 / 5;
 `;
 
 export const GridFooter = styled.footer`
