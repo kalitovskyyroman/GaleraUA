@@ -73,6 +73,9 @@ button {
 `;
 
 export const theme = {
+    colors: {
+        mainBlack: '#191919',
+    },
     btnColors: {
         regular: '#b7e4c7',
         primary: '#23311c',
@@ -89,7 +92,7 @@ export const GridLayout = styled.div`
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(20, 1fr);
-    grid-template-rows: 13vh auto 20vh;
+    grid-template-rows: 13vh auto 10vh;
 `;
 
 export const GridContent = styled.div`
@@ -109,7 +112,6 @@ export const GridAside = styled.aside`
 
 export const GridFooter = styled.footer`
     grid-column: 1 / -1;
-    background-color: rgb(98, 0, 255);
 `;
 
 export default Global;

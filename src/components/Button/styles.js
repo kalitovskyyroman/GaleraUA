@@ -7,12 +7,12 @@ const btnSize = {
         padding: '3px 10px',
     },
     regular: {
-        fontSize: '20px',
-        padding: '5px 20px',
+        fontSize: '15px',
+        padding: '7px 20px',
     },
     medium: {
-        fontSize: '25px',
-        padding: '5px 22px',
+        fontSize: '15px',
+        padding: '10px 22px',
     },
     large: {
         fontSize: '15px',
