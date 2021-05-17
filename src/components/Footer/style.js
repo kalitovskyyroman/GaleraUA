@@ -10,7 +10,7 @@ const StyledFooter = styled.div`
 `;
 
 export const FooterText = styled.div`
-    color: #ffffff;
+    color: ${({ theme }) => theme.colors.white};
 `;
 
 export default StyledFooter;

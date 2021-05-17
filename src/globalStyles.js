@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components';
 import ArvoTTF from './assets/fonts/arvo/Arvo-Regular.ttf';
+import * as colors from './variables';
 
 const Global = createGlobalStyle`
 
@@ -74,17 +75,18 @@ button {
 
 export const theme = {
     colors: {
-        mainBlack: '#191919',
+        mainBlack: colors.black,
+        white: colors.white,
     },
     btnColors: {
-        regular: '#b7e4c7',
-        primary: '#23311c',
-        danger: '#ef476f',
-        warn: '#ffba08',
-        textColor: 'white',
+        regular: colors.whiteGreen,
+        primary: colors.darkGreen,
+        danger: colors.pink,
+        warn: colors.orange,
+        textColor: colors.white,
     },
     btnColorsHover: {
-        primary: '#57B12D',
+        primary: colors.green,
     },
 };
 
@@ -97,6 +99,7 @@ export const GridLayout = styled.div`
 
 export const GridContent = styled.div`
     grid-column: 5 / -2;
+    height: 90vh;
     background-color: aqua;
 `;
 
