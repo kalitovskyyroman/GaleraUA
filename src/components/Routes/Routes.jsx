@@ -9,7 +9,7 @@ const Routes = () => {
 
     return (
         <Switch>
-            {!user || !user.is_authenticated
+            {!user?.is_authenticated
                 ? getPublicRoutes().map(route => (
                       <Route key={route.path} path={route.path} component={route.component} exact={route.exact} />
                   ))
