@@ -1,4 +1,4 @@
-import { paths } from '../../AppConfig';
+import { paths } from '../../config/routes';
 
 const routes = [
     {

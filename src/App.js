@@ -1,9 +1,12 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Aside from './components/Aside/Aside';
-import routers from './AppConfig';
 import { GridLayout, GridContent, GridAside, GridFooter, GridHeader } from './globalStyles';
+import Routes from './components/Routes/Routes';
+import { setUser } from './config/User';
+
+setUser();
 
 const App = () => (
     <GridLayout>
@@ -11,11 +14,7 @@ const App = () => (
             <GridHeader children={<Header />} />
             <GridAside children={<Aside />} />
             <GridContent>
-                <Switch>
-                    {routers.map(route => (
-                        <Route key={route.path} path={route.path} component={route.component} exact={route.exact} />
-                    ))}
-                </Switch>
+                <Routes />
             </GridContent>
             <GridFooter children={<Footer />} />
         </BrowserRouter>

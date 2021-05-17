@@ -4,7 +4,7 @@ import StyledHeader from './styles';
 import Title from './Title/Title';
 import Button from '../Button/Button';
 import text from './config.json';
-import { paths } from '../../AppConfig';
+import { paths } from '../../config/routes';
 
 const Header = () => {
     const history = useHistory();
