@@ -3,7 +3,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Aside from './components/Aside/Aside';
 import { GridLayout, GridContent, GridAside, GridFooter, GridHeader } from './globalStyles';
-import Routers from './components/Routers/Routers';
+import Routes from './components/Routes/Routes';
 import { setUser } from './config/User';
 
 setUser();
@@ -14,7 +14,7 @@ const App = () => (
             <GridHeader children={<Header />} />
             <GridAside children={<Aside />} />
             <GridContent>
-                <Routers />
+                <Routes />
             </GridContent>
             <GridFooter children={<Footer />} />
         </BrowserRouter>

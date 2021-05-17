@@ -16,7 +16,7 @@ export const paths = {
     notFound: '*',
 };
 
-const routers = [
+const routes = [
     {
         path: paths.home,
         component: Home,
@@ -51,4 +51,4 @@ const routers = [
     },
 ];
 
-export default routers;
+export default routes;
