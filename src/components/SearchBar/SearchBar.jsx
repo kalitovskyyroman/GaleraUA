@@ -1,11 +1,11 @@
 import React from 'react';
 import StyledSearchBar, { TextSearchBar, SearchBtn } from './style';
-import config from './config.json';
+import config from './config';
 
 const Searchbar = () => (
     <StyledSearchBar>
         <TextSearchBar placeholder={config.searchPlaceholder} />
-        <SearchBtn />
+        <SearchBtn img={config.glass} />
     </StyledSearchBar>
 );
 

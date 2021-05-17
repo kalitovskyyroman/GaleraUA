@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import img from '../../assets/images/logo/lupa.png';
 
 const StyledSearchBar = styled.div`
     width: 70%;
@@ -25,7 +24,7 @@ export const SearchBtn = styled.button`
     width: 30px;
     height: 30px;
     background-color: inherit;
-    background-image: url(${img});
+    background-image: url(${({ img }) => img});
     background-repeat: no-repeat;
     background-size: contain;
     margin-right: 10px;
