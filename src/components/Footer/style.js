@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledHeader = styled.div`
+const StyledFooter = styled.div`
     height: 100%;
     display: flex;
     align-items: center;
@@ -9,4 +9,8 @@ const StyledHeader = styled.div`
     padding: 0 40px;
 `;
 
-export default StyledHeader;
+export const FooterText = styled.div`
+    color: ${({ theme }) => theme.colors.white};
+`;
+
+export default StyledFooter;

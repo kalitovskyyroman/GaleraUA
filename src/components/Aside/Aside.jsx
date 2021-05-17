@@ -1,14 +1,14 @@
-import { NavLink } from 'react-router-dom';
 import React from 'react';
 import routes from './AsideConfig';
+import Sidebar, { StyledLink } from './styles';
 
 const Aside = () => (
-    <>
+    <Sidebar>
         {routes.map(route => (
-            <NavLink key={route.path} exact to={route.path}>
+            <StyledLink key={route.path} exact to={route.path}>
                 {route.text}
-            </NavLink>
+            </StyledLink>
         ))}
-    </>
+    </Sidebar>
 );
 export default Aside;
