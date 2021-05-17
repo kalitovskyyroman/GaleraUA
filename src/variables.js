@@ -5,3 +5,4 @@ export const darkGreen = '#23311c';
 export const orange = '#ffba08';
 export const pink = '#ef476f';
 export const whiteGreen = '#b7e4c7';
+export const linkHoverGreen = '#6EB223';

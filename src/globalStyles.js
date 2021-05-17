@@ -77,6 +77,7 @@ export const theme = {
     colors: {
         mainBlack: colors.black,
         white: colors.white,
+        green: colors.green,
     },
     btnColors: {
         regular: colors.whiteGreen,
