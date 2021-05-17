@@ -1,10 +1,10 @@
-import Home from './pages/Home/Home';
-import NotFound from './pages/NotFound/NotFound';
-import Login from './pages/Login/Login';
-import Signup from './pages/SignUp/SignUp';
-import JobList from './pages/JobList/JobList';
-import PinnedJobs from './pages/PinnedJobs/PinnedJobs';
-import SelectedJobs from './pages/SelectedJobs/SelectedJobs';
+import Home from '../pages/Home/Home';
+import Login from '../pages/Login/Login';
+import Signup from '../pages/SignUp/SignUp';
+import JobList from '../pages/JobList/JobList';
+import PinnedJobs from '../pages/PinnedJobs/PinnedJobs';
+import SelectedJobs from '../pages/SelectedJobs/SelectedJobs';
+import roles from './roles';
 
 export const paths = {
     home: '/',
@@ -16,7 +16,7 @@ export const paths = {
     notFound: '*',
 };
 
-const routers = [
+const routes = [
     {
         path: paths.home,
         component: Home,
@@ -41,17 +41,14 @@ const routers = [
         path: paths.pinnedJobs,
         component: PinnedJobs,
         exact: true,
+        permissions: [roles.ADMIN, roles.GUEST, roles.MANAGER],
     },
     {
         path: paths.selectedJobs,
         component: SelectedJobs,
         exact: true,
-    },
-    {
-        path: paths.notFound,
-        component: NotFound,
-        exact: false,
+        permissions: [roles.ADMIN, roles.MANAGER],
     },
 ];
 
-export default routers;
+export default routes;

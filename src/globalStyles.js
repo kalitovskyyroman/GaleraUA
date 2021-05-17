@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components';
 import ArvoTTF from './assets/fonts/arvo/Arvo-Regular.ttf';
+import * as colors from './variables';
 
 const Global = createGlobalStyle`
 
@@ -74,44 +75,47 @@ button {
 
 export const theme = {
     colors: {
-        mainBlack: '#191919',
-        mainGreen: '#57B12D',
+        mainBlack: colors.black,
+        white: colors.white,
+        green: colors.green,
     },
     btnColors: {
-        regular: '#b7e4c7',
-        primary: '#52b788',
-        danger: '#ef476f',
-        warn: '#ffba08',
-        textColor: 'white',
+        regular: colors.whiteGreen,
+        primary: colors.darkGreen,
+        danger: colors.pink,
+        warn: colors.orange,
+        textColor: colors.white,
+    },
+    btnColorsHover: {
+        primary: colors.green,
     },
 };
 
 export const GridLayout = styled.div`
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 10vh auto 20vh;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: 13vh auto 10vh;
 `;
 
 export const GridContent = styled.div`
-    grid-column: 3 / -1;
+    grid-column: 5 / -2;
     height: 90vh;
     background-color: aqua;
 `;
 
 export const GridHeader = styled.header`
+    height: 100%;
     align-self: center;
     grid-column: 1 / -1;
 `;
 
 export const GridAside = styled.aside`
-    grid-column: 1 / 3;
-    background-color: rgb(255, 196, 0);
+    grid-column: 2 / 5;
 `;
 
 export const GridFooter = styled.footer`
     grid-column: 1 / -1;
-    background-color: rgb(98, 0, 255);
 `;
 
 export default Global;

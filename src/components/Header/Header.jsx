@@ -3,8 +3,9 @@ import { useHistory } from 'react-router-dom';
 import StyledHeader from './styles';
 import Title from './Title/Title';
 import Button from '../Button/Button';
+import SearchBar from '../SearchBar/SearchBar';
 import text from './config.json';
-import { paths } from '../../AppConfig';
+import { paths } from '../../config/routes';
 
 const Header = () => {
     const history = useHistory();
@@ -13,7 +14,8 @@ const Header = () => {
     return (
         <StyledHeader>
             <Title>{text.title}</Title>
-            <Button mode='primary' onClick={handleOnClick}>
+            <SearchBar />
+            <Button mode='primary' size='large' onClick={handleOnClick}>
                 {text.enter}
             </Button>
         </StyledHeader>
