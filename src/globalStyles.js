@@ -73,6 +73,10 @@ button {
 `;
 
 export const theme = {
+    colors: {
+        mainBlack: '#191919',
+        mainGreen: '#57B12D',
+    },
     btnColors: {
         regular: '#b7e4c7',
         primary: '#52b788',
@@ -91,6 +95,7 @@ export const GridLayout = styled.div`
 
 export const GridContent = styled.div`
     grid-column: 3 / -1;
+    height: 90vh;
     background-color: aqua;
 `;
 
