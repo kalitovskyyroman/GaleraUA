@@ -100,8 +100,7 @@ export const GridLayout = styled.div`
 
 export const GridContent = styled.div`
     grid-column: 5 / -2;
-    height: 90vh;
-    background-color: aqua;
+    min-height: 90vh;
 `;
 
 export const GridHeader = styled.header`

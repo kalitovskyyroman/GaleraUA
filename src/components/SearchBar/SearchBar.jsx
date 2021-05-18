@@ -1,5 +1,5 @@
 import React from 'react';
-import StyledSearchBar, { TextSearchBar, SearchBtn } from './style';
+import StyledSearchBar, { TextSearchBar, SearchBtn } from './styles';
 import config from './config';
 
 const Searchbar = () => (
