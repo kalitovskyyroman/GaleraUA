@@ -1,11 +1,13 @@
 import routes from '../config/routes';
 
-export const getPublicRoutes = () => routes.filter(route => !route.permissions);
+const getPublicRoutes = () => routes.filter(route => !route.permissions);
 
-const getAvailableRoutes = permission => {
-    const availableRoutes = [...getPublicRoutes(), ...routes.filter(route => route.permissions?.includes(permission))];
+export const getAvailableRoutes = (isAuthenticated, permission) =>
+    isAuthenticated
+        ? [...getPublicRoutes(), ...routes.filter(route => route.permissions?.includes(permission))]
+        : getPublicRoutes();
 
-    return availableRoutes;
-};
-
-export default getAvailableRoutes;
+export const getAvailablePaths = (isAuthenticated, permission) =>
+    isAuthenticated
+        ? getAvailableRoutes(isAuthenticated, permission).map(route => route.path)
+        : getPublicRoutes().map(route => route.path);
