@@ -4,7 +4,6 @@ import Footer from './components/Footer/Footer';
 import Aside from './components/Aside/Aside';
 import { GridLayout, GridContent, GridAside, GridFooter, GridHeader } from './globalStyles';
 import Routes from './components/Routes/Routes';
-// import User from './config/User';
 import { UserProvider } from './Context/User/userContext';
 
 const App = () => (
