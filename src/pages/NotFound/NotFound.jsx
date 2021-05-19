@@ -1,6 +1,15 @@
 import React from 'react';
-import StyledNotFound from './styles';
+import StyledNotFoundContainer, { StyledNotFound, StyledLogo } from './styles';
 import config from './config';
 
-const NotFound = () => <StyledNotFound children={<span>{config.text}</span>} />;
+const NotFound = () => (
+    <StyledNotFoundContainer>
+        <StyledNotFound>
+            <StyledLogo src={config.logo} />
+            <span>
+                {config.code} {config.text}
+            </span>
+        </StyledNotFound>
+    </StyledNotFoundContainer>
+);
 export default NotFound;
