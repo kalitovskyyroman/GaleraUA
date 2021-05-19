@@ -4,19 +4,25 @@ import Footer from './components/Footer/Footer';
 import Aside from './components/Aside/Aside';
 import { GridLayout, GridContent, GridAside, GridFooter, GridHeader } from './globalStyles';
 import Routes from './components/Routes/Routes';
-import { setUser } from './config/User';
-
-setUser();
+import { UserProvider } from './Context/User/userContext';
 
 const App = () => (
     <GridLayout>
         <BrowserRouter>
-            <GridHeader children={<Header />} />
-            <GridAside children={<Aside />} />
-            <GridContent>
-                <Routes />
-            </GridContent>
-            <GridFooter children={<Footer />} />
+            <UserProvider>
+                <GridHeader>
+                    <Header />
+                </GridHeader>
+                <GridAside>
+                    <Aside />
+                </GridAside>
+                <GridContent>
+                    <Routes />
+                </GridContent>
+                <GridFooter>
+                    <Footer />
+                </GridFooter>
+            </UserProvider>
         </BrowserRouter>
     </GridLayout>
 );
