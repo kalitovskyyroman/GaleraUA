@@ -11,12 +11,18 @@ const App = () => (
     <GridLayout>
         <BrowserRouter>
             <UserProvider>
-                <GridHeader children={<Header />} />
-                <GridAside children={<Aside />} />
+                <GridHeader>
+                    <Header />
+                </GridHeader>
+                <GridAside>
+                    <Aside />
+                </GridAside>
                 <GridContent>
                     <Routes />
                 </GridContent>
-                <GridFooter children={<Footer />} />
+                <GridFooter>
+                    <Footer />
+                </GridFooter>
             </UserProvider>
         </BrowserRouter>
     </GridLayout>
