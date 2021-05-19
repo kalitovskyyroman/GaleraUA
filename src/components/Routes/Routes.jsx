@@ -10,7 +10,7 @@ const Routes = () => {
 
     return (
         <Switch>
-            {getAvailableRoutes(user?.is_authenticated, user?.role).map(route => (
+            {getAvailableRoutes(user?.isAuthenticated, user?.role).map(route => (
                 <Route key={route.path} path={route.path} component={route.component} exact={route.exact} />
             ))}
             <Route path={paths.notFound} component={NotFound} />

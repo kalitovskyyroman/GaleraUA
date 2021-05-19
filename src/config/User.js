@@ -1,5 +1,34 @@
 import roles from './roles';
 
-const User = { is_authenticated: true, role: roles.ADMIN };
+class User {
+    constructor(isAuthenticated = false, role = null) {
+        this._isAuthenticated = isAuthenticated;
+        this._role = role;
+    }
 
-export default User;
+    logIn = role => {
+        this._isAuthenticated = true;
+        this._role = role;
+    };
+
+    logOut = () => {
+        this._isAuthenticated = false;
+        this._role = null;
+    };
+
+    get isAuthenticated() {
+        return this._isAuthenticated;
+    }
+
+    get role() {
+        return this._role;
+    }
+
+    set role(role) {
+        this._role = role;
+    }
+}
+
+export const user = new User(true, roles.ADMIN);
+
+export default user;

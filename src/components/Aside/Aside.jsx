@@ -10,7 +10,7 @@ const Aside = () => {
     return (
         <Sidebar>
             {routes
-                .filter(route => getAvailablePaths(user?.is_authenticated, user?.role).includes(route.path))
+                .filter(route => getAvailablePaths(user?.isAuthenticated, user?.role).includes(route.path))
                 .map(route => (
                     <StyledLink key={route.path} exact to={route.path}>
                         {route.text}
