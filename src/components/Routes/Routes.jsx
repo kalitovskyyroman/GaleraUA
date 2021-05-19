@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import NotFound from '../../pages/NotFound/NotFound';
 import { getAvailableRoutes } from '../../utils/AvailableRoutes';
 import { paths } from '../../config/routes';
-import { UserContext } from '../../globalContext';
+import { UserContext } from '../../Context/User/userContext';
 
 const Routes = () => {
     const user = useContext(UserContext);

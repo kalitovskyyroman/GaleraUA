@@ -1,4 +1,4 @@
-import roles from './roles';
+import roles from '../../config/roles';
 
 class User {
     constructor(isAuthenticated = false, role = null) {
@@ -29,6 +29,6 @@ class User {
     }
 }
 
-export const user = new User(true, roles.ADMIN);
+const user = new User(true, roles.ADMIN);
 
 export default user;

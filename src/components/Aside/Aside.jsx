@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import routes from './AsideConfig';
 import Sidebar, { StyledLink } from './styles';
 import { getAvailablePaths } from '../../utils/AvailableRoutes';
-import { UserContext } from '../../globalContext';
+import { UserContext } from '../../Context/User/userContext';
 
 const Aside = () => {
     const user = useContext(UserContext);
