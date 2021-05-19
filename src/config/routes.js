@@ -10,9 +10,9 @@ export const paths = {
     home: '/',
     login: '/login',
     signup: '/signup',
-    jobList: '/jobList',
-    pinnedJobs: '/pinnedJobs',
-    selectedJobs: '/selectedJobs',
+    jobList: '/job-list',
+    pinnedJobs: '/pinned-jobs',
+    selectedJobs: '/selected-jobs',
     notFound: '*',
 };
 
