@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import routes from './AsideConfig';
 import Sidebar, { StyledLink } from './styles';
 import { getAvailablePaths } from '../../utils/AvailableRoutes';
-import { UserContext } from '../../Context/User/userContext';
+import { useUserState } from '../../Context/User/userContext';
 
 const Aside = () => {
-    const user = useContext(UserContext);
+    const user = useUserState();
 
     return (
         <Sidebar>
