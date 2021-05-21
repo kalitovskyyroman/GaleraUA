@@ -11,9 +11,9 @@ const Aside = () => {
         <Sidebar>
             {routes
                 .filter(route => getAvailablePaths(user?.isAuthenticated, user?.role).includes(route.path))
-                .map(route => (
-                    <StyledLink key={route.path} exact to={route.path}>
-                        {route.text}
+                .map(({ path, text }) => (
+                    <StyledLink key={path} exact to={path}>
+                        {text}
                     </StyledLink>
                 ))}
         </Sidebar>
