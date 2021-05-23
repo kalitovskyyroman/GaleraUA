@@ -6,6 +6,10 @@ const config = {
     text: {
         submitBtn: 'Log in',
     },
+    labels: {
+        email: 'Email',
+        password: 'Password',
+    },
 };
 
 export default config;

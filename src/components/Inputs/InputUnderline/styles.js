@@ -1,10 +1,8 @@
 import styled from 'styled-components';
 
-const StyledInputUnderline = styled.input`
-    width: 100%;
-    border: 0;
-    padding: 10px 10px;
-    border-bottom: 1px solid #929fba;
+const StyledInput = styled.label`
+    display: block;
+    border: solid 1px black;
 `;
 
-export default StyledInputUnderline;
+export default StyledInput;

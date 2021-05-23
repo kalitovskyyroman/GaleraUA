@@ -12,7 +12,7 @@ export const validatePassword = value => {
     let error;
     if (!value) {
         error = 'Required';
-    } else if (value.length < 5) {
+    } else if (value.trim().length < 5) {
         error = 'Password to short';
     }
     return error;

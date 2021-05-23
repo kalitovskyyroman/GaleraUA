@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-// import { Field } from 'formik';
+import { Field } from 'formik';
 
-const StyledField = styled.input`
+const StyledField = styled(Field)`
     display: block;
     border: solid 1px black;
 `;
