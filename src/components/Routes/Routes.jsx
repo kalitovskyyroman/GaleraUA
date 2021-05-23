@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import NotFound from '../../pages/NotFound/NotFound';
 import { getAvailableRoutes } from '../../utils/AvailableRoutes';
-import { paths } from '../../config/routes';
+import paths from '../../config/paths';
 import { UserContext } from '../../Context/User/userContext';
 
 const Routes = () => {

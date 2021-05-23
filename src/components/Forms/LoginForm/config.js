@@ -1,3 +1,5 @@
+import paths from '../../../config/paths';
+
 const config = {
     initialValues: {
         email: '',
@@ -9,6 +11,11 @@ const config = {
     labels: {
         email: 'Email',
         password: 'Password',
+    },
+    signup: {
+        text: 'Not a member?',
+        linkText: ' Signup now!',
+        path: paths.signup,
     },
 };
 

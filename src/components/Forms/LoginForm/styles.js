@@ -1,9 +1,20 @@
 import styled from 'styled-components';
-import { Field } from 'formik';
+import { Form } from 'formik';
 
-const StyledField = styled(Field)`
-    display: block;
-    border: solid 1px black;
+const StyledForm = styled(Form)`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+
+    & > span {
+        padding: 10px 0;
+        font-family: 'Arvo', sans-serif;
+    }
 `;
 
-export default StyledField;
+export const ButtonWrapper = styled.div`
+    margin-top: 30px;
+`;
+
+export default StyledForm;

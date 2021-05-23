@@ -27,13 +27,23 @@ const StyledButton = styled.button`
     background-color: ${({ mode, theme }) => theme.btnColors[mode] || theme.btnColors.regular};
     border: none;
     border-radius: 0;
-    border: 2px solid ${({ mode, theme }) => theme.btnColorsHover[mode] || theme.btnColorsHover.regular};
+    border: 3px solid ${({ mode, theme }) => theme.btnColorsHover[mode] || theme.btnColorsHover.regular};
     color: ${({ theme }) => theme.btnColors.textColor};
     text-transform: uppercase;
     font-family: 'Arvo', sans-serif;
-    &: hover {
+
+    &:hover {
         cursor: pointer;
         background-color: ${({ mode, theme }) => theme.btnColorsHover[mode] || theme.btnColorsHover.regular};
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        border: none;
+
+        &:hover {
+            opacity: 0.4; //this is what you want
+        }
     }
 `;
 

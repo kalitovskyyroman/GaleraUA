@@ -5,16 +5,7 @@ import JobList from '../pages/JobList/JobList';
 import PinnedJobs from '../pages/PinnedJobs/PinnedJobs';
 import SelectedJobs from '../pages/SelectedJobs/SelectedJobs';
 import roles from './roles';
-
-export const paths = {
-    home: '/',
-    login: '/login',
-    signup: '/signup',
-    jobList: '/job-list',
-    pinnedJobs: '/pinned-jobs',
-    selectedJobs: '/selected-jobs',
-    notFound: '*',
-};
+import paths from './paths';
 
 const routes = [
     {

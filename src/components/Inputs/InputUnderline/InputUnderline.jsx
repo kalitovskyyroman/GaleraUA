@@ -1,17 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useField } from 'formik';
-import StyledInput from './styles';
+import Styledlabel, { StyledError } from './styles';
 
 const InputUnderline = ({ label, validate, ...props }) => {
     const [field, meta] = useField({ ...props, validate });
     return (
         <>
-            <StyledInput>
-                {label}
-                <input {...field} {...props} />
-            </StyledInput>
-            {meta.touched && meta.error ? <div className='error'>{meta.error}</div> : null}
+            <Styledlabel placeholder={label} autoComplete='off' {...field} {...props} />
+
+            {meta.touched && meta.error ? <StyledError className='error'>{meta.error}</StyledError> : null}
         </>
     );
 };

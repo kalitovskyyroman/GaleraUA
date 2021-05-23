@@ -1,12 +1,11 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable no-unused-vars */
-/* eslint-disable object-shorthand */
-import React, { useState } from 'react';
-import { Formik, Form } from 'formik';
+import React from 'react';
+import { Formik } from 'formik';
+import { NavLink } from 'react-router-dom';
 import config from './config';
 import { validateEmail, validatePassword } from '../../../utils/valitators';
 import InputUnderline from '../../Inputs/InputUnderline/InputUnderline';
-import StyledField from './styles';
+import StyledForm, { ButtonWrapper } from './styles';
+import Button from '../../Button/Button';
 
 const LoginForm = () => (
     <Formik
@@ -19,7 +18,7 @@ const LoginForm = () => (
         }}
     >
         {({ values, isValid, dirty }) => (
-            <Form>
+            <StyledForm>
                 <InputUnderline
                     label={config.labels.email}
                     value={values.email}
@@ -32,11 +31,17 @@ const LoginForm = () => (
                     name='password'
                     validate={validatePassword}
                 />
+                <span>
+                    {config.signup.text}
+                    <NavLink to='/signup'>{config.signup.linkText}</NavLink>
+                </span>
 
-                <button type='submit' mode='primary' disabled={!(isValid && dirty)}>
-                    {config.text.submitBtn}
-                </button>
-            </Form>
+                <ButtonWrapper>
+                    <Button type='submit' mode='primary' disabled={!(isValid && dirty)}>
+                        {config.text.submitBtn}
+                    </Button>
+                </ButtonWrapper>
+            </StyledForm>
         )}
     </Formik>
 );
