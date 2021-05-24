@@ -5,7 +5,7 @@ import Title from './Title/Title';
 import Button from '../Button/Button';
 import SearchBar from '../SearchBar/SearchBar';
 import text from './config.json';
-import { paths } from '../../config/routes';
+import paths from '../../config/paths';
 
 const Header = () => {
     const history = useHistory();

@@ -24,7 +24,8 @@ const Global = createGlobalStyle`
 a:focus,a:active { outline: none }
 
 a {
-    text-decoration: none
+    text-decoration: none;
+    color: black;
 }
 
 a:visited {

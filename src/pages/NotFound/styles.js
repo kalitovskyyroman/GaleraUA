@@ -21,11 +21,11 @@ export const StyledNotFound = styled.div`
 
         @keyframes bright-text {
 
-            0% { opacity 0; }
+            0% { opacity 0 }
 
-            50% { opacity 1; }
+            50% { opacity 1 }
 
-            100% { opacity 0; }
+            100% { opacity 0 }
         }
 }`;
 
