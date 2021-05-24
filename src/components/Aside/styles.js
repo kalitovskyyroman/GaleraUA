@@ -1,24 +1,17 @@
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
-import { linkHoverGreen } from '../../variables';
+import StyledLinkComponent from '../StyledLink/StyledLink';
 
 const Sidebar = styled.div``;
 
 const activeClassName = 'nav-item-active';
 
-export const StyledLink = styled(NavLink).attrs({ activeClassName })`
-    font-family: 'Arvo', sans-serif;
+export const AsideStyledLink = styled(StyledLinkComponent).attrs({ activeClassName })`
     font-size: 20px;
     padding: 20px 0;
-    display: block;
 
     &.${activeClassName} {
         color: ${({ theme }) => theme.colors.green};
         font-weight: 600;
-    }
-
-    &:hover {
-        color: ${linkHoverGreen};
     }
 `;
 

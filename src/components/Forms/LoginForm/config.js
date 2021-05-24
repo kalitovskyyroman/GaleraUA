@@ -13,8 +13,7 @@ const config = {
         password: 'Password',
     },
     signup: {
-        text: 'Not a member?',
-        linkText: ' Signup now!',
+        linkText: 'Not a member? Signup now!',
         path: paths.signup,
     },
 };

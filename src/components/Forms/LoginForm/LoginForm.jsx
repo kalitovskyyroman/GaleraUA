@@ -1,11 +1,11 @@
 import React from 'react';
 import { Formik } from 'formik';
-import { NavLink } from 'react-router-dom';
 import config from './config';
 import { validateEmail, validatePassword } from '../../../utils/valitators';
 import InputUnderline from '../../Inputs/InputUnderline/InputUnderline';
 import StyledForm, { ButtonWrapper } from './styles';
 import Button from '../../Button/Button';
+import StyledLinkComponent from '../../StyledLink/StyledLink';
 
 const LoginForm = () => (
     <Formik
@@ -32,8 +32,7 @@ const LoginForm = () => (
                     validate={validatePassword}
                 />
                 <span>
-                    {config.signup.text}
-                    <NavLink to='/signup'>{config.signup.linkText}</NavLink>
+                    <StyledLinkComponent to='/signup'>{config.signup.linkText}</StyledLinkComponent>
                 </span>
 
                 <ButtonWrapper>
