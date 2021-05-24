@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Styledlabel, { StyledError } from './styles';
 
-const InputUnderline = ({ label, fieldName, register, error }) => (
+const InputUnderline = ({ label, fieldName, register, error, ...props }) => (
     <>
-        <Styledlabel placeholder={label} autoComplete='off' {...register(fieldName)} />
+        <Styledlabel placeholder={label} autoComplete='off' {...register(fieldName)} {...props} />
 
         {error ? <StyledError className='error'>{error}</StyledError> : null}
     </>

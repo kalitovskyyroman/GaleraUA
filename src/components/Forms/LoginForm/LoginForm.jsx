@@ -43,10 +43,11 @@ const LoginForm = () => {
                 fieldName='password'
                 register={register}
                 error={errors.password?.message}
+                type='password'
             />
 
             <span>
-                <StyledLinkComponent to='/signup'>{config.signup.linkText}</StyledLinkComponent>
+                <StyledLinkComponent to={config.signup.path}>{config.signup.linkText}</StyledLinkComponent>
             </span>
 
             <ButtonWrapper>
