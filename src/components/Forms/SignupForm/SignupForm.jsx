@@ -17,7 +17,7 @@ const schema = yup.object().shape({
     userName: validateUserName(),
 });
 
-const dragAndDropFile = (fieldName, register, setValue, getValues) => {
+const dragAndDropFile = (fieldName, register, setValue) => {
     const [drag, setDrag] = useState(false);
     const [imgPreview, setImgPreview] = useState(null);
 
@@ -31,31 +31,27 @@ const dragAndDropFile = (fieldName, register, setValue, getValues) => {
         setDrag(false);
     }
 
-    const setImage = e => {
-        setValue('file', e.dataTransfer.files);
-        setImgPreview(URL.createObjectURL(e.dataTransfer.files[0]));
+    const setImage = files => {
+        setValue('file', files);
+        setImgPreview(URL.createObjectURL(files[0]));
     };
 
     function onDropHandler(e) {
         e.preventDefault();
         setDrag(false);
-        e.dataTransfer.files[0].type.startsWith('image/') ? setImage(e) : setValue('file', null);
+        e.dataTransfer.files[0].type.startsWith('image/') ? setImage(e.dataTransfer.files) : setValue('file', null);
     }
 
-    function onCkick(e) {
-        console.log('1');
-    }
-
-    function onChange(e) {
-        // e.preventDefault();
-        console.log('change');
+    function onInputHandle(e) {
+        e.preventDefault();
+        e.target.files[0] ? setImage(e.target.files) : setValue('file', null);
     }
 
     return (
         <>
             <StyledInput
                 type='file'
-                onChange={e => onChange(e)}
+                onInput={e => onInputHandle(e)}
                 accept='image/*'
                 {...register(fieldName)}
                 id='upload'
@@ -67,7 +63,6 @@ const dragAndDropFile = (fieldName, register, setValue, getValues) => {
                     onDragOver={e => dragStartHandler(e)}
                     htmlFor='upload'
                     onDrop={e => onDropHandler(e)}
-                    onChange={e => onChange(e)}
                 >
                     Drop photo
                 </StyledDropZoneFill>
@@ -76,8 +71,6 @@ const dragAndDropFile = (fieldName, register, setValue, getValues) => {
                     onDragStart={e => dragStartHandler(e)}
                     onDragLeave={e => dragLeaveHandler(e)}
                     onDragOver={e => dragStartHandler(e)}
-                    onClick={e => onCkick(e)}
-                    onChange={e => onChange(e)}
                     imgSrc={imgPreview}
                     htmlFor='upload'
                 >
@@ -94,13 +87,12 @@ const SignupForm = () => {
         handleSubmit,
         setValue,
         getValues,
-
         formState: { errors, isValid },
     } = useForm({
         resolver: yupResolver(schema),
         mode: 'all',
         defaultValues: {
-            username: config.initialValues.userName,
+            userName: config.initialValues.userName,
             email: config.initialValues.email,
             password: config.initialValues.password,
             file: null,
@@ -137,21 +129,6 @@ const SignupForm = () => {
                 <span>
                     <StyledLinkComponent to={config.login.path}>{config.login.linkText}</StyledLinkComponent>
                 </span>
-                {/* {drag ? (
-                    <StyledDropZoneFill
-                        onDragStart={e => dragStartHandler(e)}
-                        onDragLeave={e => dragLeaveHandler(e)}
-                        onDragOver={e => dragStartHandler(e)}
-                        onDrop={e => onDropHandler(e)}
-                    />
-                ) : (
-                    <StyledDropZone
-                        onDragStart={e => dragStartHandler(e)}
-                        onDragLeave={e => dragLeaveHandler(e)}
-                        onDragOver={e => dragStartHandler(e)}
-                        onClick={e => onClickHandler(e)}
-                    />
-                )} */}
 
                 <ButtonWrapper>
                     <Button type='submit' mode='primary' disabled={!isValid}>

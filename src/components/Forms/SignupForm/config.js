@@ -7,7 +7,7 @@ const config = {
         userName: '',
     },
     text: {
-        submitBtn: 'Log in',
+        submitBtn: 'Sign up',
     },
     labels: {
         email: 'Email',
