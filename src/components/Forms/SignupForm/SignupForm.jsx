@@ -21,7 +21,6 @@ const SignupForm = () => {
         register,
         handleSubmit,
         setValue,
-        getValues,
         formState: { errors, isValid },
     } = useForm({
         resolver: yupResolver(schema),
@@ -35,8 +34,6 @@ const SignupForm = () => {
     });
 
     const onSubmit = data => console.log('Data: ', data);
-
-    const testClick = () => console.log(getValues());
 
     return (
         <>
@@ -67,9 +64,6 @@ const SignupForm = () => {
 
                 <ButtonWrapper>
                     <Button type='submit' mode='primary' disabled={!isValid}>
-                        {config.text.submitBtn}
-                    </Button>
-                    <Button onClick={testClick} mode='primary'>
                         {config.text.submitBtn}
                     </Button>
                 </ButtonWrapper>
