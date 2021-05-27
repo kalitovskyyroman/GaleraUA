@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { StyledDropZone, StyledDropZoneFill, StyledInput } from './styles';
-import config from './config';
+import { StyledInput } from './styles';
+import DragAndDropArea from './DragAndDropArea';
 
 const DragAndDrop = ({ fieldName, register, setValue, fileType }) => {
     const [drag, setDrag] = useState(false);
@@ -44,27 +44,15 @@ const DragAndDrop = ({ fieldName, register, setValue, fileType }) => {
                 {...register(fieldName)}
                 id='upload'
             />
-            {drag ? (
-                <StyledDropZoneFill
-                    onDragStart={dragStartHandler}
-                    onDragLeave={dragLeaveHandler}
-                    onDragOver={dragStartHandler}
-                    htmlFor='upload'
-                    onDrop={onDropHandler}
-                >
-                    {config.dropFileText}
-                </StyledDropZoneFill>
-            ) : (
-                <StyledDropZone
-                    onDragStart={dragStartHandler}
-                    onDragLeave={dragLeaveHandler}
-                    onDragOver={dragStartHandler}
-                    imgSrc={imgPreview}
-                    htmlFor='upload'
-                >
-                    {config.dragFileText}
-                </StyledDropZone>
-            )}
+            <DragAndDropArea
+                drag={drag}
+                onDragStart={dragStartHandler}
+                onDragLeave={dragLeaveHandler}
+                onDragOver={dragStartHandler}
+                htmlFor='upload'
+                onDrop={onDropHandler}
+                imgSrc={imgPreview}
+            />
         </>
     );
 };
