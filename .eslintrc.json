@@ -35,6 +35,7 @@
                 "allowTernary": true,
                 "allowTaggedTemplates": true
             }
-        ]
+        ],
+        "object-shorthand": "off"
     }
 }

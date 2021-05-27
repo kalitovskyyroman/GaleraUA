@@ -1,14 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import roles from '../../config/roles';
 
-const initialState = { isAuthenticated: true, role: roles.ADMIN };
+const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-export const UserContext = React.createContext(initialState);
+const [role, setRole] = useState(roles.ADMIN);
 
-export const UserProvider = ({ children }) => (
-    <UserContext.Provider value={initialState}>{children}</UserContext.Provider>
-);
+const [data, setUserData] = useState({});
+
+export const UserContext = React.createContext({});
+
+export const UserProvider = ({ children }) => {
+    const user = {
+        role: role,
+        isAuthenticated: isAuthenticated,
+        data: { ...data },
+    };
+
+    return (
+        <UserContext.Provider value={{ user, setUserData, setIsAuthenticated, setRole }}>
+            {children}
+        </UserContext.Provider>
+    );
+};
 
 UserProvider.propTypes = {
     children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,

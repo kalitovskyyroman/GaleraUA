@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import config from './config';
+import paths from '../../../config/paths';
 import { validateEmail, validatePassword } from '../../../utils/valitators';
 import InputUnderline from '../../Inputs/InputUnderline/InputUnderline';
 import StyledForm, { ButtonWrapper } from './styles';
 import Button from '../../Button/Button';
 import StyledLinkComponent from '../../StyledLink/StyledLink';
+
+import { UserContext } from '../../../Context/User/userContext';
 
 const schema = yup.object().shape({
     email: validateEmail(),
@@ -28,7 +32,18 @@ const LoginForm = () => {
         },
     });
 
-    const onSubmit = data => console.log('Data: ', data);
+    const history = useHistory();
+
+    const { setUserData, setIsAuthenticated } = useContext(UserContext);
+
+    const onSubmit = data => {
+        setIsAuthenticated(true);
+        setUserData({
+            email: data.email,
+            password: data.password,
+        });
+        history.push(paths.home);
+    };
 
     return (
         <StyledForm onSubmit={handleSubmit(onSubmit)}>

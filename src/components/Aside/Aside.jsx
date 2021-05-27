@@ -5,7 +5,7 @@ import { getAvailablePaths } from '../../utils/AvailableRoutes';
 import { UserContext } from '../../Context/User/userContext';
 
 const Aside = () => {
-    const user = useContext(UserContext);
+    const { user } = useContext(UserContext);
 
     return (
         <Sidebar>
