@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useCallback, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import StyledHeader, { StyledUserName } from './styles';

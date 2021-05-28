@@ -1,7 +1,4 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/self-closing-comp */
 import React, { useState, useContext } from 'react';
-// import PropTypes from 'prop-types';
 import StyledLogo from './styles';
 import config from './config';
 import ProfileModal from '../../Modals/ProfileModal/ProfileModal';
@@ -20,7 +17,7 @@ const UserLogo = () => {
 
     return (
         <>
-            <StyledLogo onClick={() => setModalActive(true)} img={config.logo}></StyledLogo>
+            <StyledLogo onClick={() => setModalActive(true)} img={config.logo} />
             <ProfileModal active={modalActive} setActive={setModalActive}>
                 <Button onClick={logOutHandle} mode='primary'>
                     {config.btnText}
@@ -29,7 +26,5 @@ const UserLogo = () => {
         </>
     );
 };
-
-// UserLogo.propTypes = {};
 
 export default UserLogo;
