@@ -79,6 +79,8 @@ export const theme = {
         mainBlack: colors.black,
         white: colors.white,
         green: colors.green,
+        grey: colors.grey,
+        whiteGreen: colors.whiteGreen,
     },
     btnColors: {
         regular: colors.whiteGreen,
@@ -93,14 +95,15 @@ export const theme = {
 };
 
 export const GridLayout = styled.div`
-    height: 100vh;
+    min-height: 100vh;
+    max-width: 100vw;
     display: grid;
     grid-template-columns: repeat(20, 1fr);
     grid-template-rows: 12vh auto 10vh;
 `;
 
 export const GridContent = styled.div`
-    grid-column: 5 / -2;
+    grid-column: 5 / -4;
     min-height: 90vh;
 `;
 

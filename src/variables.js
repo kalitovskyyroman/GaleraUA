@@ -6,3 +6,4 @@ export const orange = '#ffba08';
 export const pink = '#ef476f';
 export const whiteGreen = '#b7e4c7';
 export const linkHoverGreen = '#6EB223';
+export const grey = '#8A8A8A';
