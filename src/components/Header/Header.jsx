@@ -8,7 +8,7 @@ import UserLogo from './UserLogo/UserLogo';
 import text from './config.json';
 import paths from '../../config/paths';
 
-import useUser from '../../hooks/useUser';
+import useUser from '../../Context/User/userContext';
 
 const Header = () => {
     const { user } = useUser();

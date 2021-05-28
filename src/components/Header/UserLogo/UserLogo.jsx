@@ -4,7 +4,7 @@ import config from './config';
 import ProfileModal from '../../Modals/ProfileModal/ProfileModal';
 import Button from '../../Button/Button';
 
-import useUser from '../../../hooks/useUser';
+import useUser from '../../../Context/User/userContext';
 
 const UserLogo = () => {
     const { setIsAuthenticated } = useUser();

@@ -2,7 +2,7 @@ import React from 'react';
 import routes from './AsideConfig';
 import Sidebar, { AsideStyledLink } from './styles';
 import { getAvailablePaths } from '../../utils/AvailableRoutes';
-import useUser from '../../hooks/useUser';
+import useUser from '../../Context/User/userContext';
 
 const Aside = () => {
     const { user } = useUser();

@@ -11,7 +11,7 @@ import StyledForm, { ButtonWrapper } from './styles';
 import Button from '../../Button/Button';
 import StyledLinkComponent from '../../StyledLink/StyledLink';
 
-import useUser from '../../../hooks/useUser';
+import useUser from '../../../Context/User/userContext';
 
 const schema = yup.object().shape({
     email: validateEmail(),

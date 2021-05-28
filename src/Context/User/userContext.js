@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import roles from '../../config/roles';
 
@@ -24,6 +24,10 @@ export const UserProvider = ({ children }) => {
     );
 };
 
+const useUser = () => useContext(UserContext);
+
 UserProvider.propTypes = {
     children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
 };
+
+export default useUser;
