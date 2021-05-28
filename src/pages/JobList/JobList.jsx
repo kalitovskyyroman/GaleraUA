@@ -5,11 +5,9 @@ const JobList = () => {
     const [jobList, setJobList] = useState([]);
 
     useEffect(() => {
-        fetch('https://jobs.github.com/positions.json', { mode: 'cors' })
+        fetch('/positions.json', { mode: 'cors' })
             .then(response => response.json())
-            .then(data => {
-                console.log(data);
-            });
+            .then(data => console.log(data));
     }, []);
 
     return <>JobList</>;
