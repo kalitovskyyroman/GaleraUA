@@ -6,7 +6,7 @@ import paths from '../../config/paths';
 import { UserContext } from '../../Context/User/userContext';
 
 const Routes = () => {
-    const user = useContext(UserContext);
+    const { user } = useContext(UserContext);
 
     return (
         <Switch>

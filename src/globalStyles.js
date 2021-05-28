@@ -96,7 +96,7 @@ export const GridLayout = styled.div`
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(20, 1fr);
-    grid-template-rows: 13vh auto 10vh;
+    grid-template-rows: 12vh auto 10vh;
 `;
 
 export const GridContent = styled.div`
