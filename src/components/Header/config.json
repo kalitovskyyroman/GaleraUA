@@ -1,4 +1,5 @@
 {
     "title": "Galera.ua",
-    "enter": "Log in"
+    "enter": "Log in",
+    "logout": "Log out"
 }

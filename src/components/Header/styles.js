@@ -9,4 +9,10 @@ const StyledHeader = styled.div`
     padding: 0 40px;
 `;
 
+export const StyledUserName = styled.h2`
+    font-size: 20px;
+    padding: 0 10px;
+    color: ${({ theme }) => theme.colors.white};
+`;
+
 export default StyledHeader;
