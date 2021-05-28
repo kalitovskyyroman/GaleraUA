@@ -1,23 +1,35 @@
 import React, { useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
-import StyledHeader from './styles';
+import StyledHeader, { StyledUserName } from './styles';
 import Title from './Title/Title';
 import Button from '../Button/Button';
 import SearchBar from '../SearchBar/SearchBar';
+import UserLogo from './UserLogo/UserLogo';
 import text from './config.json';
 import paths from '../../config/paths';
 
+import useUser from '../../Context/User/userContext';
+
 const Header = () => {
+    const { user } = useUser();
+
     const history = useHistory();
-    const handleOnClick = useCallback(() => history.push(paths.login), [history]);
+    const logInHandle = useCallback(() => history.push(paths.login), [history]);
 
     return (
         <StyledHeader>
             <Title>{text.title}</Title>
             <SearchBar />
-            <Button mode='primary' size='large' onClick={handleOnClick}>
-                {text.enter}
-            </Button>
+            {user.isAuthenticated ? (
+                <>
+                    <StyledUserName>{user.data.email}</StyledUserName>
+                    <UserLogo />
+                </>
+            ) : (
+                <Button mode='primary' size='large' onClick={logInHandle}>
+                    {text.enter}
+                </Button>
+            )}
         </StyledHeader>
     );
 };

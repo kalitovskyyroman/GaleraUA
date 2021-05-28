@@ -8,6 +8,7 @@ const StyledSearchBar = styled.div`
 
 export const TextSearchBar = styled.input`
     width: 65%;
+    padding-left: 15px;
     color: ${({ theme }) => theme.colors.white};
     font-size: 25px;
     font-family: 'Arvo', sans-serif;
