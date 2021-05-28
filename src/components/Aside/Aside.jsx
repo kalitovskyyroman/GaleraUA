@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import routes from './AsideConfig';
 import Sidebar, { AsideStyledLink } from './styles';
 import { getAvailablePaths } from '../../utils/AvailableRoutes';
-import { UserContext } from '../../Context/User/userContext';
+import useUser from '../../hooks/useUser';
 
 const Aside = () => {
-    const { user } = useContext(UserContext);
+    const { user } = useUser();
 
     return (
         <Sidebar>

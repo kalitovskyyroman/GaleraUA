@@ -1,4 +1,4 @@
-import React, { useCallback, useContext } from 'react';
+import React, { useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
 import StyledHeader, { StyledUserName } from './styles';
 import Title from './Title/Title';
@@ -7,10 +7,11 @@ import SearchBar from '../SearchBar/SearchBar';
 import UserLogo from './UserLogo/UserLogo';
 import text from './config.json';
 import paths from '../../config/paths';
-import { UserContext } from '../../Context/User/userContext';
+
+import useUser from '../../hooks/useUser';
 
 const Header = () => {
-    const { user } = useContext(UserContext);
+    const { user } = useUser();
 
     const history = useHistory();
     const logInHandle = useCallback(() => history.push(paths.login), [history]);

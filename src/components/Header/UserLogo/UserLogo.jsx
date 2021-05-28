@@ -1,13 +1,13 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import StyledLogo from './styles';
 import config from './config';
 import ProfileModal from '../../Modals/ProfileModal/ProfileModal';
 import Button from '../../Button/Button';
 
-import { UserContext } from '../../../Context/User/userContext';
+import useUser from '../../../hooks/useUser';
 
 const UserLogo = () => {
-    const { setIsAuthenticated } = useContext(UserContext);
+    const { setIsAuthenticated } = useUser();
 
     const [modalActive, setModalActive] = useState(false);
 
