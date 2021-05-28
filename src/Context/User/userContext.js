@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import roles from '../../config/roles';
 
-const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-const [role, setRole] = useState(roles.ADMIN);
-
-const [data, setUserData] = useState({});
-
 export const UserContext = React.createContext({});
 
 export const UserProvider = ({ children }) => {
+    const [isAuthenticated, setIsAuthenticated] = useState(true);
+
+    const [role, setRole] = useState(roles.ADMIN);
+
+    const [data, setUserData] = useState({});
+
     const user = {
         role: role,
         isAuthenticated: isAuthenticated,

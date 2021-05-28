@@ -1,9 +1,11 @@
+/* eslint-disable no-unused-vars */
 import React, { useCallback, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import StyledHeader from './styles';
 import Title from './Title/Title';
 import Button from '../Button/Button';
 import SearchBar from '../SearchBar/SearchBar';
+import UserLogo from './UserLogo/UserLogo';
 import text from './config.json';
 import paths from '../../config/paths';
 import { UserContext } from '../../Context/User/userContext';
@@ -27,9 +29,10 @@ const Header = () => {
                     {/* <Button mode='primary' size='large' onClick={logOutHandle}>
                         {user.data.email}
                     </Button> */}
-                    <Button mode='primary' onClick={logOutHandle}>
+                    <UserLogo />
+                    {/* <Button mode='primary' onClick={logOutHandle}>
                         {text.logout}
-                    </Button>
+                    </Button> */}
                 </>
             ) : (
                 <Button mode='primary' size='large' onClick={logInHandle}>
