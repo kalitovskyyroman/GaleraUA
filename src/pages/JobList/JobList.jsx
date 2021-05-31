@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import JobItem from './JobItem/JobItem';
 import Loader from '../../components/Loader/Loader';
@@ -28,7 +27,7 @@ const JobList = () => {
                         title={job.title}
                         location={job.location}
                         company={job.company}
-                        created_at={job.created_at}
+                        createdAt={job.created_at}
                         type={job.type}
                     />
                 ))

@@ -103,7 +103,7 @@ export const GridLayout = styled.div`
 `;
 
 export const GridContent = styled.div`
-    grid-column: 5 / -4;
+    grid-column: 5 / -5;
     min-height: 90vh;
 `;
 
