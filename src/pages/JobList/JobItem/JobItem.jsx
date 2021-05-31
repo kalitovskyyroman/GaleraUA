@@ -16,7 +16,7 @@ const JobItem = ({ title, company, created_at, location, type }) => {
                 {company} - <span>{type}</span>
             </StyledSubtitle>
             <StyledCountryAndTime>
-                {location} | {days} days ago
+                <span>{location}</span> | {days} days ago
             </StyledCountryAndTime>
             <StyledBr />
         </StyledCard>

@@ -24,6 +24,11 @@ export const StyledCountryAndTime = styled.div`
     font-size: 15px;
     padding: 5px 0;
     color: ${({ theme }) => theme.colors.grey};
+
+    & > span {
+        color: ${({ theme }) => theme.colors.green};
+        font-weight: bold;
+    }
 `;
 
 export const StyledBr = styled.div`
