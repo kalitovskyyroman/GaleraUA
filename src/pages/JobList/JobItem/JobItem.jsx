@@ -20,7 +20,7 @@ const JobItem = ({ title, company, createdAt, location, type }) => (
 JobItem.propTypes = {
     title: PropTypes.string.isRequired,
     company: PropTypes.string.isRequired,
-    createdAt: PropTypes.instanceOf(Date).isRequired,
+    createdAt: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
 };
