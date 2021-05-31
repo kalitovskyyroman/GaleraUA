@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react';
 import JobItem from './JobItem/JobItem';
 import Loader from '../../components/Loader/Loader';
 import CenterPosition from './styles';
+import urls from '../../config/urls';
 
 const JobList = () => {
     const [jobList, setJobList] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(async () => {
-        const response = await fetch('/positions.json');
+        const response = await fetch(urls.jobList);
         const jobs = await response.json();
         await setJobList(jobs);
         await setLoading(false);
