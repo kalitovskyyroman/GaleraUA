@@ -13,7 +13,7 @@ export const LoaderProvider = ({ children }) => {
             Promise.reject(err);
         };
 
-        const reqInterceptor = axios.interceptors.request.use(
+        axios.interceptors.request.use(
             request => {
                 setLoading(true);
                 return request;
@@ -21,18 +21,13 @@ export const LoaderProvider = ({ children }) => {
             err => errInterceptor(err),
         );
 
-        const resInterceptor = axios.interceptors.response.use(
+        axios.interceptors.response.use(
             response => {
                 setLoading(false);
                 return response;
             },
             err => errInterceptor(err),
         );
-
-        return () => {
-            axios.interceptors.request.eject(reqInterceptor);
-            axios.interceptors.response.eject(resInterceptor);
-        };
     }, []);
 
     return <LoaderContext.Provider value={{ loading, setLoading }}>{children}</LoaderContext.Provider>;
