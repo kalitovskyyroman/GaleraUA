@@ -1,39 +1,30 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import JobItem from './JobItem/JobItem';
-import Loader from '../../components/Loader/Loader';
-import CenterPosition from './styles';
 import urls from '../../config/urls';
 
 const JobList = () => {
     const [jobList, setJobList] = useState([]);
-    const [loading, setLoading] = useState(true);
 
     useEffect(async () => {
-        const response = await fetch(urls.jobList);
-        const jobs = await response.json();
-        await setJobList(jobs);
-        await setLoading(false);
+        const response = await axios.get(urls.jobList);
+        setJobList(response.data);
     }, []);
 
     return (
         <>
-            {loading ? (
-                <CenterPosition>
-                    <Loader />
-                </CenterPosition>
-            ) : (
-                jobList.map(job => (
-                    <JobItem
-                        key={job.id}
-                        title={job.title}
-                        location={job.location}
-                        company={job.company}
-                        createdAt={job.created_at}
-                        type={job.type}
-                    />
-                ))
-            )}
+            {jobList.map(job => (
+                <JobItem
+                    key={job.id}
+                    title={job.title}
+                    location={job.location}
+                    company={job.company}
+                    createdAt={job.created_at}
+                    type={job.type}
+                />
+            ))}
         </>
     );
 };
+
 export default JobList;
