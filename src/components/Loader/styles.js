@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 const StyledLoader = styled.div`
     width: 100%;
-    margin: 0 auto;
     border-radius: 10px;
     position: relative;
     padding: 2px;
