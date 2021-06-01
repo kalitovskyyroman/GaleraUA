@@ -36,6 +36,7 @@
                 "allowTaggedTemplates": true
             }
         ],
-        "object-shorthand": "off"
+        "object-shorthand": "off",
+        "no-unused-vars": "warn"
     }
 }
