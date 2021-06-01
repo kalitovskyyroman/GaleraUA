@@ -9,9 +9,9 @@ import { LoaderProvider } from './Context/Loader/LoaderContext';
 
 const App = () => (
     <GridLayout>
-        <LoaderProvider>
-            <BrowserRouter>
-                <UserProvider>
+        <BrowserRouter>
+            <UserProvider>
+                <LoaderProvider>
                     <GridHeader>
                         <Header />
                     </GridHeader>
@@ -24,9 +24,9 @@ const App = () => (
                     <GridFooter>
                         <Footer />
                     </GridFooter>
-                </UserProvider>
-            </BrowserRouter>
-        </LoaderProvider>
+                </LoaderProvider>
+            </UserProvider>
+        </BrowserRouter>
     </GridLayout>
 );
 export default App;

@@ -26,7 +26,7 @@ export const LoaderProvider = ({ children }) => {
                 setLoading(false);
                 return response;
             },
-            err => errInterseptor(err),
+            err => errInterceptor(err),
         );
 
         return () => {
