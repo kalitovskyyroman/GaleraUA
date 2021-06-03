@@ -4,11 +4,11 @@ import StyledLoader from './styles';
 import useLoader from '../../Context/Loader/LoaderContext';
 
 const Loader = () => {
-    const { loading } = useLoader();
+    const { requestsCount } = useLoader();
 
     return (
         <>
-            {loading ? (
+            {!(requestsCount === 0) ? (
                 <StyledLoader>
                     <div />
                 </StyledLoader>

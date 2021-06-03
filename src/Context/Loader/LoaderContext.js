@@ -5,17 +5,17 @@ import axios from 'axios';
 export const LoaderContext = React.createContext(false);
 
 export const LoaderProvider = ({ children }) => {
-    const [loading, setLoading] = useState(false);
+    const [requestsCount, setRequestsCount] = useState(0);
 
     useEffect(() => {
         const errInterceptor = err => {
-            setLoading(false);
+            setRequestsCount(requestsCount => requestsCount - 1);
             Promise.reject(err);
         };
 
         axios.interceptors.request.use(
             request => {
-                setLoading(true);
+                setRequestsCount(requestsCount => requestsCount + 1);
                 return request;
             },
             err => errInterceptor(err),
@@ -23,14 +23,14 @@ export const LoaderProvider = ({ children }) => {
 
         axios.interceptors.response.use(
             response => {
-                setLoading(false);
+                setRequestsCount(requestsCount => requestsCount - 1);
                 return response;
             },
             err => errInterceptor(err),
         );
     }, []);
 
-    return <LoaderContext.Provider value={{ loading, setLoading }}>{children}</LoaderContext.Provider>;
+    return <LoaderContext.Provider value={{ requestsCount }}>{children}</LoaderContext.Provider>;
 };
 
 const useLoader = () => useContext(LoaderContext);

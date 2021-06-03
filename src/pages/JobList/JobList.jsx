@@ -13,6 +13,11 @@ const JobList = () => {
         setJobList(response.data.jobs);
     }, []);
 
+    useEffect(async () => {
+        const response = await axios.get(urls.jobList + '?limit=10');
+        console.log(response);
+    }, []);
+
     return (
         <>
             <List

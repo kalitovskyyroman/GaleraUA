@@ -41,6 +41,7 @@
         "prefer-template": "off",
         "react/no-array-index-key": "warn",
         "no-nested-ternary": "off",
-        "react/forbid-prop-types": "off"
+        "react/forbid-prop-types": "off",
+        "no-shadow": "off"
     }
 }
