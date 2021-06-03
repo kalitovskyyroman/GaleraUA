@@ -1,31 +1,28 @@
-/* eslint-disable no-nested-ternary */
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/destructuring-assignment */
 import React from 'react';
+import PropTypes from 'prop-types';
+import { StyledNoItems, StyledSkeletonBlock } from './styles';
+import config from './config';
 
-import pluralize from 'pluralize';
-
-const List = ({ items, skeleton }) => {
-    console.log(items);
-
-    return (
-        <>
-            {items ? (
-                items.length === 0 ? (
-                    <h1>Empty list</h1>
-                ) : (
-                    items.map(item => <React.Fragment key={item.key}>{item}</React.Fragment>)
-                )
+const List = ({ items, skeleton }) => (
+    <>
+        {items ? (
+            items.length === 0 ? (
+                <StyledNoItems>
+                    <h1>{config.text}</h1>
+                </StyledNoItems>
             ) : (
-                <div>
-                    {skeleton}
-                    {skeleton}
-                    {skeleton}
-                </div>
-            )}
-        </>
-    );
-};
+                items.map(item => <React.Fragment key={item.key}>{item}</React.Fragment>)
+            )
+        ) : (
+            <StyledSkeletonBlock>
+                {[...Array(10)].map((e, i) => (
+                    <React.Fragment key={i}>{skeleton}</React.Fragment>
+                ))}
+            </StyledSkeletonBlock>
+        )}
+    </>
+);
+
+List.propTypes = { items: PropTypes.array.isRequired, skeleton: PropTypes.node.isRequired };
 
 export default List;

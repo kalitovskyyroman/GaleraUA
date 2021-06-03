@@ -38,6 +38,9 @@
         ],
         "object-shorthand": "off",
         "no-unused-vars": "warn",
-        "prefer-template": "off"
+        "prefer-template": "off",
+        "react/no-array-index-key": "warn",
+        "no-nested-ternary": "off",
+        "react/forbid-prop-types": "off"
     }
 }
