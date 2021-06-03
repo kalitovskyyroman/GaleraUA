@@ -23,6 +23,10 @@ const List = ({ items, skeleton }) => (
     </>
 );
 
-List.propTypes = { items: PropTypes.array.isRequired, skeleton: PropTypes.node.isRequired };
+List.defaultProps = {
+    items: null,
+};
+
+List.propTypes = { items: PropTypes.array, skeleton: PropTypes.node.isRequired };
 
 export default List;
