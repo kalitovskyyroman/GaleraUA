@@ -1,5 +1,5 @@
 const urls = {
-    jobList: '/positions.json',
+    jobList: 'https://remotive.io/api/remote-jobs',
 };
 
 export default urls;

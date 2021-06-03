@@ -52,6 +52,5 @@
         "eslint-plugin-react-hooks": "^4.2.0",
         "prettier": "^2.2.1",
         "prop-types": "^15.7.2"
-    },
-    "proxy": "https://jobs.github.com"
+    }
 }
