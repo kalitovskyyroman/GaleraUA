@@ -1,23 +1,26 @@
-/* eslint-disable prefer-template */
 import React from 'react';
 import PropTypes from 'prop-types';
-import StyledCard, { StyledTitle, StyledCountryAndTime, StyledSubtitle, StyledBr } from './styles';
-import config from './config';
+import StyledCard, { StyledTitle, StyledCountryAndTime, StyledSubtitle, StyledBr, StyledLocation } from './styles';
 import calculateDaysFromNow from '../../../utils/calculateDates';
+import { jobDaysFormatting, workTypeFormatting } from '../../../utils/stringFormatting';
 
-const JobItem = ({ title, company, createdAt, location, type }) => (
-    <StyledCard>
-        <StyledTitle>{title}</StyledTitle>
-        <StyledSubtitle>
-            {company} - <span>{type.replace('_', ' ')}</span>
-        </StyledSubtitle>
-        <StyledCountryAndTime>
-            <span>{location}</span> |{' '}
-            {calculateDaysFromNow(createdAt) === 0 ? config.today : calculateDaysFromNow(createdAt) + ' ' + config.time}
-        </StyledCountryAndTime>
-        <StyledBr />
-    </StyledCard>
-);
+const JobItem = ({ title, company, createdAt, location, type }) => {
+    const days = calculateDaysFromNow(createdAt);
+
+    return (
+        <StyledCard>
+            <StyledTitle>{title}</StyledTitle>
+            <StyledSubtitle>
+                {company} - <span>{workTypeFormatting(type)}</span>
+            </StyledSubtitle>
+            <StyledCountryAndTime>
+                <StyledLocation>{location ? location + ' | ' : null}</StyledLocation>
+                <span> {jobDaysFormatting(days)}</span>
+            </StyledCountryAndTime>
+            <StyledBr />
+        </StyledCard>
+    );
+};
 
 JobItem.propTypes = {
     title: PropTypes.string.isRequired,

@@ -15,6 +15,7 @@ export const StyledSubtitle = styled.h3`
     padding: 10px 0;
 
     & > span {
+        text-transform: capitalize;
         color: ${({ theme }) => theme.colors.green};
         font-weight: bold;
     }
@@ -24,11 +25,11 @@ export const StyledCountryAndTime = styled.div`
     font-size: 15px;
     padding: 5px 0;
     color: ${({ theme }) => theme.colors.grey};
+`;
 
-    & > span {
-        color: ${({ theme }) => theme.colors.green};
-        font-weight: bold;
-    }
+export const StyledLocation = styled.span`
+    color: ${({ theme }) => theme.colors.green};
+    font-weight: bold;
 `;
 
 export const StyledBr = styled.div`

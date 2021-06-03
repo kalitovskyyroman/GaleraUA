@@ -4,6 +4,8 @@
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
 
+import pluralize from 'pluralize';
+
 const List = ({ items, skeleton }) => {
     console.log(items);
 

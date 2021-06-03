@@ -37,6 +37,7 @@
             }
         ],
         "object-shorthand": "off",
-        "no-unused-vars": "warn"
+        "no-unused-vars": "warn",
+        "prefer-template": "off"
     }
 }
