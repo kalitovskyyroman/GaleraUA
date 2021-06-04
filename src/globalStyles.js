@@ -111,6 +111,9 @@ export const GridHeader = styled.header`
     height: 100%;
     align-self: center;
     grid-column: 1 / -1;
+    position: sticky;
+    top: 0;
+    left: 0;
 `;
 
 export const GridAside = styled.aside`

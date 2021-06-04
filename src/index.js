@@ -5,12 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Global, { theme } from './globalStyles';
 
+import GlobalProvider from './Context/globalProvider';
+
 ReactDOM.render(
     <React.StrictMode>
-        <ThemeProvider theme={theme}>
-            <Global />
-            <App />
-        </ThemeProvider>
+        <GlobalProvider>
+            <ThemeProvider theme={theme}>
+                <Global />
+                <App />
+            </ThemeProvider>
+        </GlobalProvider>
     </React.StrictMode>,
     document.getElementById('root'),
 );

@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 import StyledLinkComponent from '../StyledLink/StyledLink';
 
-const Sidebar = styled.div``;
+const Sidebar = styled.div`
+    position: sticky;
+    top: 12vh;
+    left: 0;
+`;
 
 const activeClassName = 'nav-item-active';
 

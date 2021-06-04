@@ -1,14 +1,14 @@
 import React from 'react';
 import StyledLoader from './styles';
 
-import useLoader from '../../Context/Loader/LoaderContext';
+import useLoader from '../../hooks/useLoader';
 
 const Loader = () => {
-    const { requestsCount } = useLoader();
+    const [loading] = useLoader();
 
     return (
         <>
-            {!(requestsCount === 0) ? (
+            {loading ? (
                 <StyledLoader>
                     <div />
                 </StyledLoader>

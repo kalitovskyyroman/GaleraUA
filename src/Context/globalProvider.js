@@ -1,15 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { UserProvider } from './User/userContext';
-import { LoaderProvider } from './Loader/LoaderContext';
 
 const GlobalContext = React.createContext({});
 
 const GlobalProvider = ({ children }) => (
     <GlobalContext.Provider value={{}}>
-        <UserProvider>
-            <LoaderProvider>{children}</LoaderProvider>
-        </UserProvider>
+        <UserProvider>{children}</UserProvider>
     </GlobalContext.Provider>
 );
 
