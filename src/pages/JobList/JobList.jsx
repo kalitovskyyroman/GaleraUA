@@ -9,9 +9,9 @@ import fetchJobs from '../../utils/axiosRequests';
 const JobList = () => {
     const [jobList, setJobList] = useState(null);
 
-    const jobListCancelToken = axios.CancelToken.source();
-
     useEffect(() => {
+        const jobListCancelToken = axios.CancelToken.source();
+
         fetchJobs(urls.jobList, jobListCancelToken.token, setJobList);
 
         return () => {
