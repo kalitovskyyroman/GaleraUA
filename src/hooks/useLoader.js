@@ -31,8 +31,8 @@ const useLoader = () => {
             interceptors.error,
         );
         return () => {
-            // axios.interceptors.request.eject(reqInterceptor);
-            // axios.interceptors.response.eject(resInterceptor);
+            axios.interceptors.request.eject(reqInterceptor);
+            axios.interceptors.response.eject(resInterceptor);
         };
     }, [interceptors]);
 
