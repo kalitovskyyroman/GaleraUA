@@ -8,6 +8,7 @@ export const StyledTitle = styled.h2`
     font-size: 20px;
     font-weight: bold;
     color: ${({ theme }) => theme.colors.green};
+    cursor: pointer;
 `;
 
 export const StyledSubtitle = styled.h3`

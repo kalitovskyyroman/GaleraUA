@@ -4,6 +4,7 @@ import Signup from '../pages/SignUp/SignUp';
 import JobList from '../pages/JobList/JobList';
 import PinnedJobs from '../pages/PinnedJobs/PinnedJobs';
 import SelectedJobs from '../pages/SelectedJobs/SelectedJobs';
+import Job from '../pages/Job/Job';
 import roles from './roles';
 import paths from './paths';
 
@@ -26,6 +27,11 @@ const routes = [
     {
         path: paths.jobList,
         component: JobList,
+        exact: true,
+    },
+    {
+        path: paths.job,
+        component: Job,
         exact: true,
     },
     {

@@ -12,12 +12,12 @@ import StyledCard, {
 import calculateDaysFromNow from '../../../utils/calculateDates';
 import { jobDaysFormatting, workTypeFormatting } from '../../../utils/stringFormatting';
 
-const JobItem = ({ title, company, createdAt, location, type, salary }) => {
+const JobItem = ({ title, company, createdAt, location, type, salary, onClickTitleHandle }) => {
     const days = calculateDaysFromNow(createdAt);
 
     return (
         <StyledCard>
-            <StyledTitle>{title}</StyledTitle>
+            <StyledTitle onClick={onClickTitleHandle}>{title}</StyledTitle>
             <StyledSubtitle>
                 {company} - <span>{workTypeFormatting(type)}</span>
             </StyledSubtitle>
@@ -40,6 +40,7 @@ JobItem.propTypes = {
     location: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
     salary: PropTypes.string.isRequired,
+    onClickTitleHandle: PropTypes.func.isRequired,
 };
 
 export default JobItem;

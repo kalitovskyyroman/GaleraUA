@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import JobItem from './JobItem/JobItem';
 import JobItemSkeleton from './JobItemSkeleton/JobItemSkeleton';
@@ -23,6 +24,17 @@ const JobList = () => {
         window.scrollTo(0, 0);
     }, []);
 
+    const history = useHistory();
+
+    const onClickTitleHandle = job => {
+        history.push({
+            pathname: '/job',
+            state: {
+                ...job,
+            },
+        });
+    };
+
     return (
         <>
             <List
@@ -35,6 +47,7 @@ const JobList = () => {
                         createdAt={job.publication_date}
                         type={job.job_type}
                         salary={job.salary}
+                        onClickTitleHandle={() => onClickTitleHandle(job)}
                     />
                 ))}
                 skeleton={<JobItemSkeleton />}
