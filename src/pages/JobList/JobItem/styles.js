@@ -38,4 +38,14 @@ export const StyledBr = styled.div`
     height: 0.5px;
 `;
 
+export const DescriptionSection = styled.div`
+    display: flex;
+    justify-content: space-between;
+`;
+
+export const StyledSalary = styled.div`
+    color: ${({ theme }) => theme.colors.green};
+    font-family: 'Arvo', sans-serif;
+`;
+
 export default StyledCard;

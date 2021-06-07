@@ -34,6 +34,7 @@ const JobList = () => {
                         company={job.company_name}
                         createdAt={job.publication_date}
                         type={job.job_type}
+                        salary={job.salary}
                     />
                 ))}
                 skeleton={<JobItemSkeleton />}
