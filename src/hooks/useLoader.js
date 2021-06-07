@@ -17,9 +17,8 @@ const useLoader = () => {
                 dec();
                 return response;
             },
-            error: error => {
+            error: () => {
                 dec();
-                return Promise.reject(error);
             },
         }),
         [inc, dec],
@@ -32,8 +31,8 @@ const useLoader = () => {
             interceptors.error,
         );
         return () => {
-            axios.interceptors.request.eject(reqInterceptor);
-            axios.interceptors.response.eject(resInterceptor);
+            // axios.interceptors.request.eject(reqInterceptor);
+            // axios.interceptors.response.eject(resInterceptor);
         };
     }, [interceptors]);
 

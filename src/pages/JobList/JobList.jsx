@@ -4,18 +4,19 @@ import JobItem from './JobItem/JobItem';
 import JobItemSkeleton from './JobItemSkeleton/JobItemSkeleton';
 import List from '../../components/List/List';
 import urls from '../../config/urls';
+import fetchJobs from '../../utils/axiosRequests';
 
 const JobList = () => {
     const [jobList, setJobList] = useState(null);
 
-    useEffect(async () => {
-        const response = await axios.get(urls.jobList);
-        setJobList(response.data.jobs);
-    }, []);
+    const jobListCancelToken = axios.CancelToken.source();
 
-    useEffect(async () => {
-        const response = await axios.get(urls.jobList + '?limit=10');
-        console.log(response);
+    useEffect(() => {
+        fetchJobs(urls.jobList, jobListCancelToken.token, setJobList);
+
+        return () => {
+            jobListCancelToken.cancel();
+        };
     }, []);
 
     return (

@@ -17,9 +17,8 @@ const useInterceptor = (requestAction, responseAction, errorAction) => {
             responseAction();
             return response;
         },
-        error => {
+        () => {
             errorAction();
-            Promise.reject(error);
         },
     );
 
