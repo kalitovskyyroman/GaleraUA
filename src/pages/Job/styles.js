@@ -7,9 +7,10 @@ export const StyledTitle = styled.h1`
     font-weight: 600;
 `;
 
-export const StyledLocation = styled.h2`
-    font-size: 20px;
+export const StyledGeneralInfo = styled.p`
+    font-size: 25px;
     padding-bottom: 15px;
+    line-height: 45px;
 
     & > span {
         color: ${({ theme }) => theme.colors.green};
@@ -18,29 +19,6 @@ export const StyledLocation = styled.h2`
     }
 `;
 
-export const StyledSalary = styled.h3`
-    font-size: 20px;
-    padding-bottom: 15px;
-
-    & > span {
-        color: ${({ theme }) => theme.colors.green};
-        font-weight: 600;
-    }
-`;
-
-export const StyledJobType = styled.h3`
-    font-size: 20px;
-    padding-bottom: 15px;
-
-    & > span {
-        color: ${({ theme }) => theme.colors.green};
-        text-transform: capitalize;
-        font-weight: 600;
-    }
-`;
-
-const StyledDescription = styled.div`
+export const StyledDescription = styled.div`
     font-size: 20px;
 `;
-
-export default StyledDescription;

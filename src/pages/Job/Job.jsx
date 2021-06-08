@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-fragments */
+/* eslint-disable prefer-destructuring */
 /* eslint-disable no-undef */
 /* eslint-disable camelcase */
 /* eslint-disable no-restricted-globals */
@@ -6,20 +8,11 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import ReactHtmlParser from 'react-html-parser';
-import StyledDescription, { StyledTitle, StyledLocation, StyledSalary, StyledJobType } from './styles';
-import { workTypeFormatting } from '../../utils/stringFormatting';
+import { StyledDescription, StyledTitle, StyledGeneralInfo } from './styles';
+import config from './config';
 
 const Job = props => {
-    const {
-        title,
-        category,
-        company_name,
-        description,
-        job_type,
-        publication_date,
-        salary,
-        candidate_required_location,
-    } = props.location.state;
+    const { title, description, ...state } = props.location.state;
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -28,13 +21,18 @@ const Job = props => {
     return (
         <>
             <StyledTitle>{title}</StyledTitle>
-            <StyledLocation>
-                Location: <span>{candidate_required_location}</span>
-                {salary && <StyledSalary>{salary}</StyledSalary>}
-            </StyledLocation>
-            <StyledJobType>
-                Job type: <span>{workTypeFormatting(job_type)}</span>
-            </StyledJobType>
+            <StyledGeneralInfo>
+                {config.genegateInfoArray(state).map(
+                    item =>
+                        item.payload && (
+                            <React.Fragment key={item.title}>
+                                {item.title}
+                                <span>{item.payload}</span>
+                                <br />
+                            </React.Fragment>
+                        ),
+                )}
+            </StyledGeneralInfo>
             <StyledDescription>{ReactHtmlParser(description)}</StyledDescription>
         </>
     );
