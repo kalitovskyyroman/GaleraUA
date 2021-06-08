@@ -8,7 +8,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import ReactHtmlParser from 'react-html-parser';
-import { StyledDescription, StyledTitle, StyledGeneralInfo } from './styles';
+import { StyledDescription, StyledTitle, StyledGeneralInfo, StyledDescriptionTitle } from './styles';
 import config from './config';
 
 const Job = props => {
@@ -33,7 +33,10 @@ const Job = props => {
                         ),
                 )}
             </StyledGeneralInfo>
-            <StyledDescription>{ReactHtmlParser(description)}</StyledDescription>
+            <StyledDescription>
+                <StyledDescriptionTitle>{config.text.description}</StyledDescriptionTitle>
+                {ReactHtmlParser(description)}
+            </StyledDescription>
         </>
     );
 };

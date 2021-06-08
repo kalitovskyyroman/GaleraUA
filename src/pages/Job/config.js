@@ -28,6 +28,7 @@ const config = {
             payload: state.salary,
         },
     ],
+    text: { description: 'Job description: ' },
 };
 
 export default config;

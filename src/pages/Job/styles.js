@@ -19,6 +19,18 @@ export const StyledGeneralInfo = styled.p`
     }
 `;
 
+export const StyledDescriptionTitle = styled.div`
+    font-size: 25px;
+    color: ${({ theme }) => theme.colors.green};
+    font-weight: 600;
+    padding-bottom: 15px;
+`;
+
 export const StyledDescription = styled.div`
     font-size: 20px;
+    padding-bottom: 40px;
+
+    ul {
+        padding: 10px 0 10px 30px;
+    }
 `;
