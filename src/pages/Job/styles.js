@@ -1,8 +1,14 @@
 import styled from 'styled-components';
 
+export const TitleBlock = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+`;
+
 export const StyledTitle = styled.h1`
     font-size: 30px;
-    padding: 25px 0;
     color: ${({ theme }) => theme.colors.green};
     font-weight: 600;
 `;

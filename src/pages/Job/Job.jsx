@@ -8,7 +8,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import ReactHtmlParser from 'react-html-parser';
-import { StyledDescription, StyledTitle, StyledGeneralInfo, StyledDescriptionTitle } from './styles';
+import HeartButton from '../../components/HeartButton/HeartButton';
+import { StyledDescription, StyledTitle, StyledGeneralInfo, StyledDescriptionTitle, TitleBlock } from './styles';
 import config from './config';
 
 const Job = props => {
@@ -20,7 +21,10 @@ const Job = props => {
 
     return (
         <>
-            <StyledTitle>{title}</StyledTitle>
+            <TitleBlock>
+                <StyledTitle>{title}</StyledTitle>
+                <HeartButton />
+            </TitleBlock>
             <StyledGeneralInfo>
                 {config.genegateInfoArray(state).map(
                     item =>
