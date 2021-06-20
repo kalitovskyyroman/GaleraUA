@@ -8,4 +8,4 @@ Title.defaultProps = { children: '' };
 
 Title.propTypes = { children: PropTypes.oneOfType([PropTypes.object, PropTypes.string]) };
 
-export default Title;
+export default React.memo(Title);

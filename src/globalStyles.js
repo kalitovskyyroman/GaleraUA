@@ -52,17 +52,12 @@ button{cursor: pointer;}
 button::-moz-focus-inner {padding:0;border:0;}
 a, a:visited{text-decoration: none;}
 a:hover{text-decoration: none;}
-ul li{list-style: none;}
 img{vertical-align: top;}
 
 h1,h2,h3,h4,h5,h6 {
     font-size:inherit;
     font-weight: 400;
     font-family: 'Arvo', sans-serif;
-}
-
-ol, ul {
-	list-style: none;
 }
 
 button {
@@ -79,6 +74,8 @@ export const theme = {
         mainBlack: colors.black,
         white: colors.white,
         green: colors.green,
+        grey: colors.grey,
+        whiteGreen: colors.whiteGreen,
     },
     btnColors: {
         regular: colors.whiteGreen,
@@ -93,14 +90,15 @@ export const theme = {
 };
 
 export const GridLayout = styled.div`
-    height: 100vh;
+    min-height: 100vh;
+    max-width: 100vw;
     display: grid;
     grid-template-columns: repeat(20, 1fr);
     grid-template-rows: 12vh auto 10vh;
 `;
 
 export const GridContent = styled.div`
-    grid-column: 5 / -2;
+    grid-column: 5 / -5;
     min-height: 90vh;
 `;
 
@@ -108,6 +106,9 @@ export const GridHeader = styled.header`
     height: 100%;
     align-self: center;
     grid-column: 1 / -1;
+    position: sticky;
+    top: 0;
+    left: 0;
 `;
 
 export const GridAside = styled.aside`

@@ -5,7 +5,7 @@ import roles from '../../config/roles';
 export const UserContext = React.createContext({});
 
 export const UserProvider = ({ children }) => {
-    const [isAuthenticated, setIsAuthenticated] = useState(true);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     const [role, setRole] = useState(roles.ADMIN);
 

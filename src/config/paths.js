@@ -5,6 +5,7 @@ const paths = {
     jobList: '/job-list',
     pinnedJobs: '/pinned-jobs',
     selectedJobs: '/selected-jobs',
+    job: '/job',
     notFound: '*',
 };
 
